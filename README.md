@@ -81,6 +81,11 @@ basicskillz - Testing on qb-core w/ okok notify.
 
 ```
 
+## Acknowledgments
+
+Special thanks to Decay Studios for creating the inventory icons used in this release. You can find them on Discord [here](https://discord.gg/yDXZwZPjdN).
+[![Decay Studios](https://i.imgur.com/a6n1J4u.png)]([https://i.imgur.com/a6n1J4u.png](https://i.imgur.com/a6n1J4u.png))
+
 ## Resource support
 - **Notes**: This will be one of my last resource's I release for free, I feel its fair as ive been in the community for years and this marks #10 of my free releases currently floating around (that I havent removed). If you use this, my otherstuff or have supported my releases or encouraged me at all I appreciate you. Give me feedback in my discord, let me know if theres things I could do better, tell me what you enjoy.
 
