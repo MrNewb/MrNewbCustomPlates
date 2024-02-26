@@ -12,7 +12,7 @@ By integrating this script, server owners can effortlessly implement a monetizat
 
 - **License Plate Setting**: Allows players to set a license plate to a vehicle and updates it in the database.
 - **Glovebox and Trunk Inventory Transfer**: Moves glovebox and trunk inventories when changing vehicles.
-- **Compatibility**: Compatible with ESX, QB-Core, Ox-Lib Input, QB-Input, and various notification systems.
+- **Compatibility**: Compatible with ESX, QB-Core, QBX, Ox-Lib Input, QB-Input, and various notification systems.
 - **Advanced Logging**: Offers advanced logging capabilities via Ox-Lib or QB-Logs.
 - **Profanity Filter**: Features a profanity filter that can be adjusted to avoid specific bad words.
 - **Framework Specific Trimming**: Trims functionality specific to different frameworks for seamless integration.
