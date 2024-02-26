@@ -56,7 +56,7 @@ In the `config.lua` file, you can customize the following settings:
 
 MrNewb - Initial development of the resource.
 
-PickleMods - Improvments to the script to use callback functions and structure changes.
+PickleMods - Improvments to the script to use callback functions and structure changes [his tebex store here](https://store.picklemods.com/).
 
 Rumaier - initially testing within the ESX framework on Cosmix RP, which eventually prompted the transition from Ox-Lib being a hard dependency to utilizing framework helper functions.
 
@@ -77,7 +77,7 @@ basicskillz - Testing on qb-core w/ okok notify.
 ## Item Configuration for qb-core
 ```lua
 
-	['customizableplate'] 			= {['name'] = 'customizableplate', 			    ['label'] = 'Custom Plate', 		    		 ['weight'] = 100, 		['type'] = 'item', 		['image'] = '',								['unique'] = true, 	['useable'] = true, 		['shouldClose'] = true,	   ['combinable'] = nil,                     ['description'] = 'Custom Plate for setting a new plate to a vehicle'},
+	['customizableplate'] 			= {['name'] = 'customizableplate', 			    ['label'] = 'Custom Plate', 		    		 ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'newbplate.png',								['unique'] = true, 	['useable'] = true, 		['shouldClose'] = true,	   ['combinable'] = nil,                     ['description'] = 'Custom Plate for setting a new plate to a vehicle'},
 
 ```
 
