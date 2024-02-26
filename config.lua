@@ -10,9 +10,9 @@
 Config = {
 	Debug = false,												-- set this to turn on prints
 	CustomPlateName = "customizableplate",						-- The item that would be used for this to work
-	framework = "esx",											-- set this to the name of the method, pass as string. options are "qb", "esx", "ox", "nd" if using qbx just set to qb
+	framework = "qb",											-- set this to the name of the method, pass as string. options are "qb", "esx" if using qbx just set to qb
 	Logs = false,												-- set this to the name of the method, pass as string. options are "qb","ox", set to false to disable like Logs = false,		
-	Notify = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb","ok","sd"
+	Notify = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb","ok","sd", "brutal", "mythic", "pnotify"
 	Input = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb"
 	Keys = "ox",												-- set this to the name of the method, pass as string. options are "qb", "qs", "gflp10", "jaksam", "mk", "renewed", "t1ger" if you use a key system like wx just set this to Keys = false,
 	Inventory = "ox",											-- set this to the name of the method, pass as string. options are "ox","qb"
