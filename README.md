@@ -1,4 +1,4 @@
-[Add:https://imgur.com/8845ad89-a26f-4c0c-90b0-7620f4ba45f7](https://i.imgur.com/zs4H13Q.png)
+[![MrNewbsCustomPlate](https://i.imgur.com/zs4H13Q.png)]([https://i.imgur.com/zs4H13Q.png](https://i.imgur.com/zs4H13Q.png))
 
 # MrNewbsCustomPlate
 
