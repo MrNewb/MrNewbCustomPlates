@@ -1,4 +1,5 @@
 if Config.Keys ~= "qs" then return end
+if Config.Debug then print("Keys Set To ", Config.Keys) end
 
 function GiveKeys(src, entityid, oldplate, newplate)
 	local data = {}

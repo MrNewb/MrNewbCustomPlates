@@ -9,6 +9,7 @@ RegisterNetEvent('MrNewbCustomPlates:requestPlate', function()
 end)
 
 RegisterNetEvent('MrNewbCustomPlates:setplatetoclient', function(data)
+	if Config.Debug then print(json.encode(data)) end
 	if not data.inputted1 then return NotifyPlayer("No Plate Provided", "error") end
 	SetVehicleNumberPlateText(data.entity, data.inputted1)
 end)
@@ -19,6 +20,7 @@ RegisterNetEvent('MrNewbCustomPlates:plateCustomization', function(vehicle, plat
 	data.options1 = Config.PlateLengthText
 	data.vehicle = plate
 	data.entity = vehicle
+	if Config.Debug then print(json.encode(data)) end
 	CreateInput(data)
 end)
 
@@ -35,6 +37,7 @@ local function BadWordFilter(data)
 end
 
 function ReturnedInput(data)
+	if Config.Debug then print(json.encode(data)) end
 	if not data.inputted1 then return NotifyPlayer("You haven't submitted any data", "error") end
 	if BadWordFilter(data) then return NotifyPlayer("You are attempting to use a word on the word filter.", "error") end
 	TriggerServerEvent("MrNewbCustomPlates:getPlate", data)

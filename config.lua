@@ -8,13 +8,14 @@
 --                                                                  |_|              			
 --		  Need support? Join our Discord server for help: https://discord.gg/d3Kh2vz3a7				
 Config = {
-	Debug = false,												-- set this to turn on prints
+	Debug = true,												-- set this to turn on prints
 	CustomPlateName = "customizableplate",						-- The item that would be used for this to work
 	framework = "qb",											-- set this to the name of the method, pass as string. options are "qb", "esx" if using qbx just set to qb
 	Logs = false,												-- set this to the name of the method, pass as string. options are "qb","ox", set to false to disable like Logs = false,		
 	Notify = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb","ok","sd", "brutal", "mythic", "pnotify"
 	Input = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb"
-	Keys = "ox",												-- set this to the name of the method, pass as string. options are "qb", "qs", "gflp10", "jaksam", "mk", "renewed", "t1ger" if you use a key system like wx just set this to Keys = false,
+	AltKeys = false,											-- if you use t1ger keys or mk set to true so a key can be removed before the plate change
+	Keys = "qb",												-- set this to the name of the method, pass as string. options are "qb", "qs", "gflp10", "jaksam", "mk", "renewed", "t1ger" if you use a key system like wx just set this to Keys = false,
 	Inventory = "ox",											-- set this to the name of the method, pass as string. options are "ox","qb"
 	Progress = "ox",											-- set this to the name of the method, pass as string. options are "ox","qb"
 	Icon = 'fa-solid fa-car-side',								-- set this to the icon you want to use, only works on ox_lib menu so if not using it leave it blank

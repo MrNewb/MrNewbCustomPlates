@@ -1,4 +1,5 @@
 if Config.Progress ~= "qb" then return end
+if Config.Debug then print("Progress Set To ", Config.Progress) end
 
 function CreateProgress(vehicle, currentplate)
     exports['progressbar']:Progress({

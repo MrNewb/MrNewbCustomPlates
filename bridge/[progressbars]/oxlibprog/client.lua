@@ -1,4 +1,5 @@
 if Config.Progress ~= "ox" then return end
+if Config.Debug then print("Progress Set To ", Config.Progress) end
 
 function CreateProgress(vehicle, currentplate)
 	if lib.progressBar({

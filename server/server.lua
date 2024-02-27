@@ -2,13 +2,9 @@ RegisterNetEvent("MrNewbCustomPlates:getPlate", function(data)
     local src = source
     local oldPlate = data.vehicle
     local newPlate = data.inputted1
-    local entityid = data.entity
+    local entityId = data.entity
 
     if not newPlate then return NotifyPlayer(src, "No Plate Provided", "error") end
-
-    if Config.Debug then print("Player id# "..src.." has changed a plate from ".."Old Plate "..oldPlate.." New Plate "..newPlate) end
-
-    NotifyPlayer(src, "The license plate has been changed from "..oldPlate.." to "..newPlate.." ", "success")
 
     VerifyPlateOwnership(src, oldPlate, function(plateOwner)
         if not plateOwner then return NotifyPlayer(src, "You Dont Own This Vehicle.", "error") end
@@ -16,15 +12,16 @@ RegisterNetEvent("MrNewbCustomPlates:getPlate", function(data)
         VerifyPlateAvailable(newPlate, function(plateExists)
             if plateExists then return NotifyPlayer(src, "This plate already exists.", "error") end
 
-            --if you use t1ger keys or mk uncomment the line below
-            --if Config.Keys == "t1ger" then RemoveKeys(src, entityid, oldPlate, newPlate) end
+            if Config.AltKeys then RemoveKeys(src, entityId, oldPlate, newPlate) end
             UpdateFrameworkPlate(newPlate, oldPlate)
             UpdateVehicleInventoryTrunkGlove(src, oldPlate, newPlate)
             TriggerClientEvent("MrNewbCustomPlates:setplatetoclient", -1, data)
+            NotifyPlayer(src, "The license plate has been changed from "..oldPlate.." to "..newPlate.." ", "success")
+            if Config.Debug then print("Player id# "..src.." has changed a plate from ".."Old Plate "..oldPlate.." New Plate "..newPlate) end
             if Config.Logs then logs(src, " | Has changed plate from "..oldPlate.." to "..newPlate) end
             RemoveItemFromInventory(src)
 
-            if Config.Keys then GiveKeys(src, entityid, oldPlate, newPlate) end
+            if Config.Keys then GiveKeys(src, entityId, oldPlate, newPlate) end
         end)
     end)
 end)

@@ -2,6 +2,8 @@ if Config.framework ~= "qb" then return end
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
+if Config.Debug then print("Framework Set To ", Config.framework) end
+
 function VerifyPlateAvailable(plate, cb)
     MySQL.query('SELECT * FROM player_vehicles WHERE plate = ?;', { plate },
     function(result)

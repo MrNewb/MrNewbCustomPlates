@@ -1,5 +1,6 @@
 if Config.Notify ~= "qb" then return end
+if Config.Debug then print("Notify Set To ", Config.Notify) end
 
 function NotifyPlayer(msg, status)
-	return QBCore.Functions.Notify(msg, status, 10000)
+	return exports['qb-notify']:Notify(msg, "primary", 10000)
 end

@@ -1,5 +1,5 @@
 if Config.Inventory ~= "ox" then return end
---print(Config.Inventory," inventory Loaded")
+if Config.Debug then print("Inventory Set To ", Config.Inventory) end
 local ox_inventory = exports.ox_inventory
 
 function UpdateVehicleInventoryTrunkGlove(src, oldplate, newplate)

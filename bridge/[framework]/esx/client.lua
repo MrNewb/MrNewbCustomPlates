@@ -2,7 +2,7 @@ if Config.framework ~= "esx" then return end
 
 local ESX = exports["es_extended"]:getSharedObject()
 
-if Config.debug then print(Config.framework) end
+if Config.Debug then print(Config.framework) end
 
 function GetClosestVehicleFW(coords)
 	return ESX.Game.GetClosestVehicle(coords)

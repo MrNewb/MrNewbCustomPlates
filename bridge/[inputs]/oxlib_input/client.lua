@@ -1,5 +1,7 @@
 if Config.Input ~= "ox" then return end
 
+if Config.Debug then print("Input Set To ", Config.Input) end
+
 function CreateInput(data)
 	local title = data.title
 	local description = data.options1

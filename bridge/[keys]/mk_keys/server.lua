@@ -1,4 +1,5 @@
 if Config.Keys ~= "mk" then return end
+if Config.Debug then print("Keys Set To ", Config.Keys) end
 
 function RemoveOldKeys(src, entityid, oldplate, newplate)
 	exports["mk_vehiclekeys"]:RemoveKey(entityid, src)
