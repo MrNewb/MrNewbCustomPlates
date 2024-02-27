@@ -2,11 +2,11 @@ if Config.framework ~= "qb" then return end
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
-function GetClosestVehicle(coords)
+function GetClosestVehicleFW(coords)
 	return QBCore.Functions.GetClosestVehicle(coords)
 end
 
-function GetVehiclePlate(vehicle)
+function GetVehiclePlateFW(vehicle)
 	return QBCore.Functions.GetPlate(vehicle)
 end
 

@@ -4,11 +4,11 @@ local ESX = exports["es_extended"]:getSharedObject()
 
 if Config.debug then print(Config.framework) end
 
-function GetClosestVehicle(coords)
+function GetClosestVehicleFW(coords)
 	return ESX.Game.GetClosestVehicle(coords)
 end
 
-function GetVehiclePlate(vehicle)
+function GetVehiclePlateFW(vehicle)
 	return ESX.Math.Trim(GetVehicleNumberPlateText(vehicle))
 end
 

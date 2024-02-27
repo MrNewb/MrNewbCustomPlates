@@ -1,9 +1,9 @@
 RegisterNetEvent('MrNewbCustomPlates:requestPlate', function()
 	local player = PlayerPedId()
 	local coords = GetEntityCoords(player)
-	local vehicle = GetClosestVehicle(coords)
+	local vehicle = GetClosestVehicleFW(coords)
 	if not vehicle then return NotifyPlayer("You are not close enough to a vehicle", "error") end
-	local currentplate = GetVehiclePlate(vehicle)
+	local currentplate = GetVehiclePlateFW(vehicle)
 
 	CreateProgress(vehicle, currentplate)
 end)
