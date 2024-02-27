@@ -14,8 +14,8 @@ Config = {
 	Logs = false,												-- set this to the name of the method, pass as string. options are "qb","ox", set to false to disable like Logs = false,
 	Notify = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb","ok","sd", "brutal", "mythic", "pnotify"
 	Input = "ox",												-- set this to the name of the method, pass as string. options are "ox","qb"
-	AltKeys = false,											-- if you use t1ger keys or mk set to true so a key can be removed before the plate change
-	Keys = "qb",												-- set this to the name of the method, pass as string. options are "qb", "qs", "gflp10", "jaksam", "mk", "renewed", "t1ger" if you use a key system like wx just set this to Keys = false,
+	AltKeys = false,											-- if you use t1ger keys/ mk / mono set to true so a key can be removed before the plate change
+	Keys = "qb",												-- set this to the name of the method, pass as string. options are "qb", "qs", "gflp10", "jaksam", "mk", "renewed", "t1ger", "mono" if you use a key system like wx just set this to Keys = false,
 	Inventory = "ox",											-- set this to the name of the method, pass as string. options are "ox","qb",
 	Progress = "ox",											-- set this to the name of the method, pass as string. options are "ox","qb",
 	Icon = 'fa-solid fa-car-side',								-- set this to the icon you want to use, only works on ox_lib menu so if not using it leave it blank

@@ -29,6 +29,7 @@ function RemoveItemFromInventory(source)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local item = Config.CustomPlateName
+    if Config.Debug then print("Removing item ",item) end
     Player.Functions.RemoveItem(item, 1)
 end
 

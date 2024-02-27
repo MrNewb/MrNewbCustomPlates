@@ -28,6 +28,7 @@ function RemoveItemFromInventory(source)
     local src = source
     local xPlayer = ESX.GetPlayerFromId(src)
     local item = Config.CustomPlateName
+    if Config.Debug then print("Removing item ",item) end
     xPlayer.removeInventoryItem(item, 1)
 end
 
