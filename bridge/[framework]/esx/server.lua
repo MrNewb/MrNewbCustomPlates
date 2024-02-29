@@ -7,6 +7,7 @@ if Config.Debug then print(Config.framework) end
 function VerifyPlateAvailable(plate, cb)
     MySQL.query('SELECT * FROM owned_vehicles WHERE plate = ?;', { plate },
     function(result)
+        if Config.Debug then print("VerifyPlateAvailable ",json.encode(result)) end
         cb(result and #result > 0 and result[1].plate == plate)
     end)
 end
@@ -16,6 +17,7 @@ function VerifyPlateOwnership(source, plate, cb)
 	local owner = xPlayer.identifier
 	MySQL.query('SELECT * FROM owned_vehicles WHERE owner = ? AND plate = ?;', { owner, plate },
 	function(result)
+        if Config.Debug then print("VerifyPlateOwnership ",json.encode(result)) end
 		cb(result and #result > 0 and result[1].plate == plate)
 	end)
 end
@@ -34,5 +36,6 @@ end
 
 ESX.RegisterUsableItem(Config.CustomPlateName, function(source)
 	local src = source
+    if Config.Debug then print("requestPlate ID# ",src) end
 	TriggerClientEvent("MrNewbCustomPlates:requestPlate", src)
 end)
