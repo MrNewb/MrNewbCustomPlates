@@ -12,7 +12,7 @@ RegisterNetEvent("MrNewbCustomPlates:getPlate", function(data)
         VerifyPlateAvailable(newPlate, function(plateExists)
             if plateExists then return NotifyPlayer(src, "This plate already exists.", "error") end
 
-            if Config.AltKeys then RemoveKeys(src, entityId, oldPlate, newPlate) end
+            if Config.AltKeys then RemoveOldKeys(src, entityId, oldPlate, newPlate) end
             UpdateFrameworkPlate(newPlate, oldPlate)
             UpdateVehicleInventoryTrunkGlove(src, oldPlate, newPlate)
             TriggerClientEvent("MrNewbCustomPlates:setplatetoclient", -1, data)
