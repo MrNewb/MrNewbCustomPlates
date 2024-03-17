@@ -37,7 +37,7 @@ In the `config.lua` file, you can customize the following settings:
 - `Notify`: Set the notification method ("ox", "qb", "ok", "sd").
 - `Input`: Set the input method ("qb" or "ox").
 - `Keys`: Set the key method ("qb", "qs", "gflp10", "jaksam", "mk", "renewed", "t1ger").
-- `Inventory`: Specify the inventory method ("ox" or "qb"). Highlighting the significant advantage of utilizing Ox for this purpose through a single export, as opposed to manual querying and updates with QB-based inventories. This functionality is designed to seamlessly integrate with other QB-based inventory systems that handle glovebox and trunk operations in a similar manner.
+- `Inventory`: Specify the inventory method ("ox", "qb" or "qs"). Highlighting the significant advantage of utilizing Ox for this purpose through a single export, as opposed to manual querying and updates with QB-based inventories.
 - `Progress`: Set the progress method ("ox" or "qb").
 - `Icon`: Set the icon used for the resource (only in ox input).
 - `Placeholder`: Set the default placeholder for license plates.
