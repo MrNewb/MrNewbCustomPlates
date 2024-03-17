@@ -4,7 +4,7 @@ lua54 'yes'
 use_fxv2_oal 'yes'
 name "MrNewbCustomPlates"
 author "MrNewb"
-version "1.0.0"
+version "1.0.1"
 shared_scripts {
 	'@ox_lib/init.lua', --- comment this out if you dont for some reason use it?
 	'config.lua'
