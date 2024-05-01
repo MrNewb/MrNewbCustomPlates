@@ -1,6 +1,7 @@
 [![MrNewbsCustomPlate](https://i.imgur.com/zs4H13Q.png)]([https://i.imgur.com/zs4H13Q.png](https://i.imgur.com/zs4H13Q.png))
 
 # MrNewbsCustomPlate
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R76BIM9)
 
 MrNewbsCustomPlate is a FiveM resource designed to provide a customizable license plate system for vehicles. 
 This resource allows players to set a license plate to a vehicle and updates it in the database. 
