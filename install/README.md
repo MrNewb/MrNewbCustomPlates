@@ -94,3 +94,6 @@ Special thanks to Decay Studios for creating the inventory icons used in this re
 
 - **Discord**: I created a basic Discord server to brainstorm ideas for future releases, focusing mainly on quality-of-life improvements and entertaining feature requests. I'm open to collaborating with anyone even helping small servers. Its odd and I dont fit the current fivem community, but I do this for fun and enjoy learning.
 https://discord.gg/ZBKYxB6PzA
+
+
+- **UPDATING**: This has been updated, the bridge was cleaned up a bit and some prefrences on how things were arranged. Hope you are enjoying it.
