@@ -2,8 +2,6 @@ RegisterNetEvent('MrNewbCustomPlates:requestPlate', function()
 	local player = PlayerPedId()
 	local coords = GetEntityCoords(player)
 	local vehicle = GetClosestVehicleFW(coords)
-	print("Vehicle", vehicle)
-	print("NETID", NetworkGetNetworkIdFromEntity(vehicle))
 	if not vehicle then return NotifyPlayer(Lang.ToFarFromVeh) end
 	local currentplate = GetVehiclePlateFW(vehicle)
 
