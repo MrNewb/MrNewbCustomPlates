@@ -4,10 +4,11 @@ lua54 'yes'
 use_fxv2_oal 'yes'
 name "MrNewbCustomPlates"
 author "MrNewb"
-version "1.0.1"
+version "1.0.2"
 shared_scripts {
-	'@ox_lib/init.lua', --- comment this out if you dont for some reason use it?
-	'config.lua'
+	'@ox_lib/init.lua',
+	'shared/config.lua',
+	'shared/lang.lua',
 }
 
 client_scripts {
