@@ -23,8 +23,6 @@ function GiveKeys(src, entityid, netId, oldplate, newplate)
 		return exports.MrNewbVehicleKeys:GiveKeys(src, netId)
 	elseif Config.Keys == "gflp10" then
 		return exports['gflp10-carkeys']:AddCarkey(src, newplate)
-	elseif Config.Keys == "qb" then
-		return TriggerEvent('qb-keys:server:SetOwner', src, entityid, newplate)
 	elseif Config.Keys == "jaksam" then
 		exports["vehicles_keys"]:giveVehicleKeysToPlayerId(src, newplate, "owned")
 		exports["vehicles_keys"]:refreshPlayerOwnedVehicles(src)
