@@ -24,5 +24,6 @@ Config = {
 		"badword",
 		"fuck",
 		"asshole",
-	}
+	},
+	OverrideQBInventoryV2 = false,										-- set this to true if you use v2 qb-inventory. qb inventoryv2 will not automatically move the items though. They have some security features they added that I dont wana read
 }

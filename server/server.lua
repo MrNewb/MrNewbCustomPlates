@@ -1,3 +1,5 @@
+lib.versionCheck('MrNewb/MrNewbCustomPlates')
+
 RegisterNetEvent("MrNewbCustomPlates:server:getPlate", function(data)
     local src = source
     local oldPlate = data.vehicle
