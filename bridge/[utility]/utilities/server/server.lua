@@ -40,11 +40,7 @@ function GiveKeys(src, entityid, netId, oldplate, newplate)
 	elseif Config.Keys == "qb" then
 		TriggerClientEvent("vehiclekeys:client:SetOwner", src, newplate)
 	elseif Config.Keys == "qs" then
-		local data = {}
-		data.id = entityid
-		data.oldplatenum = oldplate
-		data.newplatenum = newplate
-		TriggerClientEvent("MrNewbCustomPlates:QuasarKeyEventClient", src, data)
+		TriggerClientEvent("MrNewbCustomPlates:QuasarKeyEventClient", src, {id = entityid, oldplatenum = oldplate, newplatenum = newplate})
 	elseif Config.Keys == "renewed" then
 		if exports['Renewed-Vehiclekeys']:hasKey(src, oldplate) then
 			exports['Renewed-Vehiclekeys']:removeKey(src, oldplate)
@@ -56,7 +52,9 @@ function GiveKeys(src, entityid, netId, oldplate, newplate)
 end
 
 function RemoveOldKeys(src, entityid, oldplate, newplate)
-	if Config.Keys == "jaksam" then
+	if Config.Keys == "mrnewb" then
+		TriggerClientEvent("MrNewbCustomPlates:MrNewbKeyEventClient", src, oldplate)
+	elseif Config.Keys == "jaksam" then
 		exports["vehicles_keys"]:removeKeysFromPlayerId(src, oldplate)
 		exports["vehicles_keys"]:refreshPlayerOwnedVehicles(src)
 	elseif Config.Keys == "mk" then

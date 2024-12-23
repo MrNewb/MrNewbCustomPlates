@@ -116,10 +116,13 @@ function CreateInput(data)
 	end
 end
 
-if not Config.Keys == "qs" then return end
 RegisterNetEvent('MrNewbCustomPlates:QuasarKeyEventClient', function(data)
 	local entity = data.id
 	local newplate = data.newplatenum
 	local model = GetDisplayNameFromVehicleModel(GetEntityModel(entity))
 	exports['qs-vehiclekeys']:GiveKeys(newplate, model, true)
+end)
+
+RegisterNetEvent('MrNewbCustomPlates:MrNewbKeyEventClient', function(plateString)
+	exports.MrNewbVehicleKeys:RemoveKeysByPlate(plateString)
 end)

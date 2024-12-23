@@ -15,14 +15,14 @@ RegisterNetEvent("MrNewbCustomPlates:server:getPlate", function(data)
         VerifyPlateAvailable(newPlate, function(plateExists)
             if plateExists then return NotifyPlayer(src, Lang.FailedTaken) end
 
-            if Config.AltKeys then RemoveOldKeys(src, entityId, oldPlate, newPlate) end
+            RemoveOldKeys(src, entityId, oldPlate, newPlate)
             UpdateFrameworkPlate(newPlate, oldPlate)
             UpdateVehicleInventoryTrunkGlove(src, oldPlate, newPlate)
             TriggerClientEvent("MrNewbCustomPlates:setplatetoclient", -1, data)
             NotifyPlayer(src, Lang.Changed)
             RemoveItemFromInventory(src)
 
-            if Config.Keys then GiveKeys(src, entityId, netId, oldPlate, newPlate) end
+            GiveKeys(src, entityId, netId, oldPlate, newPlate)
             if Config.Logs then Logs(src, " | Has changed plate from "..oldPlate.." to "..newPlate) end
             if not Config.Debug then return end
             print("Player id# "..src.." has changed a plate from ".."Old Plate "..oldPlate.." New Plate "..newPlate)
