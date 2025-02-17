@@ -1,23 +1,31 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
-use_fxv2_oal 'yes'
-name "MrNewbCustomPlates"
+name "MrNewbCustomPlatesV2"
 author "MrNewb"
-version "1.0.5"
+version "2.0.0"
 shared_scripts {
 	'@ox_lib/init.lua',
-	'shared/config.lua',
-	'shared/lang.lua',
+	'src/shared/config.lua',
+	'src/shared/init.lua',
 }
 
 client_scripts {
-	'bridge/**/client.lua',
-	'client/*.lua',
+	'src/client/*.lua',
 }
 
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
-	'bridge/**/server.lua',
-	'server/*.lua',
+	'src/server/*.lua',
+}
+
+files {
+	'locales/*.json',
+}
+
+dependencies {
+	'/server:6116',
+	'/onesync',
+	'ox_lib',
+	'community_bridge',
 }

@@ -1,0 +1,6 @@
+{
+    "PlateCustomize": { "Title": "Plate Customization", "Submit": "Submit", "Description": "Please Put In The Plate You Want" },
+    "Checks": { "NoInput": "No Plate Text Submitted", "NotLongEnough": "Plate Text Is Not Long Enough", "ToLong": "Plate Text Is To Long", "MustBeNetworked": "The Vehicle Must Be Networked", "NoVehicle": "No Vehicle Close Enough", "LetterNumber": "Must Be Letters Or Numbers","PlateTaken": "A Vehicle With This Plate Already Exsists", "NotOwner": "You Do Not Own This Vehicle", "BadWord": "You Cant Use Bad Words", "InsideVehicle": "You Must Do This Outside The Vehicle" },
+    "Success": { "PlateSet": "Vehicle Plate Updated" },
+    "Progressbar": { "ProgressText": "Setting Plate" }
+}
