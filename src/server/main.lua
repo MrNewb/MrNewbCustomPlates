@@ -61,9 +61,8 @@ function RunPlateChecks(src, data, slot)
     Bridge.Inventory.RemoveItem(src, Config.PlateItemName, 1, slot, nil)
     SetVehicleNumberPlateText(vehicle, newPlate)
     NotifyPlayer(src, locale("Success.PlateSet"), "success", 5000)
-    Bridge.VehicleKey.RemoveKeys(src, netId, trimmedString)
     Wait(250)
-    Bridge.VehicleKey.GiveKeys(src, netId, newPlate)
+    TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlate", src, newPlate, trimmedString, netId)
 end
 
 Bridge.Framework.RegisterUsableItem(Config.PlateItemName, function(src, itemData)
