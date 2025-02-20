@@ -71,3 +71,8 @@ Bridge.Framework.RegisterUsableItem(Config.PlateItemName, function(src, itemData
     if not data.plate or not data.netId then return end
     RunPlateChecks(src, data, itemData.slot)
 end)
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() ~= resourceName then return end
+    Bridge.Version.VersionChecker("MrNewb/MrNewbCustomPlates")
+end)
