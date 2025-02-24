@@ -34,14 +34,20 @@ end
 
 function BeginProgressBar()
     if not Config.ProgressBarEnabled then return end
-    Bridge.Progressbar.StartProgressBar(5000, locale("Progressbar.ProgressText"), false, false, { move = false, sprint = false, car = false, combat = false, }, {
-        dict = 'amb@prop_human_parking_meter@female@base',
-        clip = 'base_female',
-        flag = 49,
-    }, function()
-        --print("Coulda Done Something Here,Buttttttttttttttt I didn't")
-    end, function()
-        --print("This shouldnt happen, ever but I left it here")
+    Bridge.ProgressBar.Open({
+        duration = 5000,
+        label = locale("Progressbar.ProgressText"),
+        disable = {
+            move = true,
+            combat = true
+        },
+        anim = {
+            dict = "amb@prop_human_parking_meter@female@base",
+            clip = "base_female",
+            flag = 49,
+        }
+    }, function(cancelled)
+        --print(cancelled and "Cancelled" or "Complete")
     end)
 end
 

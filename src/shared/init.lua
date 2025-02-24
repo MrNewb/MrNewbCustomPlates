@@ -1,5 +1,12 @@
 Bridge = exports.community_bridge:Bridge()
-lib.locale()
+
+RegisterNetEvent('Bridge:Refresh', function(moduleName, wrappedModule)
+    Bridge[moduleName] = wrappedModule
+end)
+
+function locale(message)
+    return Bridge.Language.Locale(message)
+end
 
 function DoDebugPrint(message)
 	if not Config.Utility.Debug then return end

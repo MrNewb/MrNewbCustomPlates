@@ -53,6 +53,7 @@ function RunPlateChecks(src, data, slot)
     local vehicle = NetworkGetEntityFromNetworkId(netId)
     local plate = GetVehicleNumberPlateText(vehicle)
     local trimmedString = TrimString(plate)
+    newPlate = string.upper(newPlate)
     if not RunBadWordFilter(newPlate) then return end
     local owner = VerifyVehicleOwnerShip(src, trimmedString)
     if not owner then return NotifyPlayer(src, locale("Checks.NotOwner"), "error", 5000) end
