@@ -4,7 +4,8 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R76BIM9)
 
 ## Install Guide
--- https://mrnewbs-scrips.gitbook.io/guide
+- Docs available at https://mrnewbs-scrips.gitbook.io/guide
+- Community_Bridge available at https://github.com/The-Order-Of-The-Sacred-Framework/community_bridge
 
 ## Acknowledgments
 
