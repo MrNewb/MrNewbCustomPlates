@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 name "MrNewbCustomPlatesV2"
 author "MrNewb"
-version "2.0.2"
+version "2.0.3"
 shared_scripts {
 	'@ox_lib/init.lua',
 	'src/shared/config.lua',

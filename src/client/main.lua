@@ -71,7 +71,14 @@ end
 RegisterNetEvent("MrNewbCustomPlates:Client:UpdatePlate", function(newplate, oldplate, netid)
     if not NetworkDoesNetworkIdExist(netid) then return end
     local vehicle = NetworkGetEntityFromNetworkId(netid)
+    SetVehicleNumberPlateText(vehicle, newplate)
     Bridge.VehicleKey.RemoveKeys(vehicle, oldplate)
     Wait(500)
     Bridge.VehicleKey.GiveKeys(vehicle, newplate)
+end)
+
+RegisterNetEvent("MrNewbCustomPlates:Client:UpdatePlateText", function(newplate, oldplate, netid)
+    if not NetworkDoesNetworkIdExist(netid) then return end
+    local vehicle = NetworkGetEntityFromNetworkId(netid)
+    SetVehicleNumberPlateText(vehicle, newplate)
 end)

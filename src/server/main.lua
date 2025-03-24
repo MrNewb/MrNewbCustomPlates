@@ -64,6 +64,7 @@ function RunPlateChecks(src, data, slot)
     NotifyPlayer(src, locale("Success.PlateSet"), "success", 5000)
     Wait(250)
     TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlate", src, newPlate, trimmedString, netId)
+    TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlateText", -1, netId)
 end
 
 Bridge.Framework.RegisterUsableItem(Config.PlateItemName, function(src, itemData)
