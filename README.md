@@ -1,6 +1,6 @@
 [![MrNewbsCustomPlate](https://i.imgur.com/UPyWXAs.png)]([https://i.imgur.com/UPyWXAs.png](https://i.imgur.com/UPyWXAs.png))
 
-# MrNewbsCustomPlate
+# MrNewbsCustomPlates
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R76BIM9)
 
 ## Install Guide
