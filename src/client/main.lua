@@ -77,8 +77,9 @@ RegisterNetEvent("MrNewbCustomPlates:Client:UpdatePlate", function(newplate, old
     Bridge.VehicleKey.GiveKeys(vehicle, newplate)
 end)
 
-RegisterNetEvent("MrNewbCustomPlates:Client:UpdatePlateText", function(newplate, oldplate, netid)
+RegisterNetEvent("MrNewbCustomPlates:Client:UpdatePlateText", function(newplate, netid)
     if not NetworkDoesNetworkIdExist(netid) then return end
     local vehicle = NetworkGetEntityFromNetworkId(netid)
+    if not DoesEntityExist(vehicle) then return end
     SetVehicleNumberPlateText(vehicle, newplate)
 end)
