@@ -65,6 +65,8 @@ function RunPlateChecks(src, data, slot)
     Wait(250)
     TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlate", src, newPlate, trimmedString, netId)
     TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlateText", -1, newPlate, netId)
+    local vehicleState = Entity(vehicle).state
+    vehicleState:set('plate', newPlate, true)
 end
 
 Bridge.Framework.RegisterUsableItem(Config.PlateItemName, function(src, itemData)
