@@ -15,7 +15,6 @@
 
 - 🎨 **Custom License Plates**: Create and manage personalized license plates
 - 🔗 **Multi-Inventory Support**: Compatible with various inventory systems through Community Bridge
-- 🎮 **User-Friendly Interface**: Intuitive UI for seamless player experience
 - ⚡ **Performance Optimized**: Lightweight and efficient resource design
 - 🛠️ **Highly Configurable**: Extensive customization options
 - 🔄 **Regular Updates**: Continuous improvements and feature additions
