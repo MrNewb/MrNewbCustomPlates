@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Dostosowanie Tablicy",
+        "Submit": "Wyślij",
+        "Description": "Proszę wprowadzić tekst tablicy, który chcesz"
+    },
+    "Checks": {
+        "NoInput": "Nie przesłano tekstu tablicy",
+        "NotLongEnough": "Tekst tablicy nie jest wystarczająco długi",
+        "TooLong": "Tekst tablicy jest za długi",
+        "MustBeNetworked": "Pojazd musi być w sieci",
+        "NoVehicle": "Brak pojazdu wystarczająco blisko",
+        "LetterNumber": "Musi być tylko literami lub cyframi",
+        "PlateTaken": "Pojazd z tą tablicą już istnieje",
+        "NotVehicleOwner": "Nie posiadasz pojazdu z tablicą %s",
+        "BadWord": "Nie możesz używać nieodpowiednich słów",
+        "InsideVehicle": "Musisz to zrobić poza pojazdem"
+    },
+    "Success": {
+        "PlateSet": "Tablica pojazdu zaktualizowana z %s na %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Ustawianie Tablicy"
+    }
+}

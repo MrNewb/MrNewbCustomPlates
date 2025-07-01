@@ -3,9 +3,10 @@ game 'gta5'
 lua54 'yes'
 name "MrNewbCustomPlatesV2"
 author "MrNewb"
-version "2.0.5"
+version "2.1.0"
+description "Custom Plates for FiveM with support for multiple frameworks and community bridge."
+
 shared_scripts {
-	'@ox_lib/init.lua',
 	'src/shared/config.lua',
 	'src/shared/init.lua',
 }
@@ -26,14 +27,10 @@ files {
 dependencies {
 	'/server:6116',
 	'/onesync',
-	'ox_lib',
+	'oxmysql',
 	'community_bridge',
 }
 
 escrow_ignore {
-	'src/shared/*.lua',   	-- Config files
-	'src/client/*.lua',   	-- open files
-	'src/server/*.lua',   	-- open files
-	'src/open/server/*.lua',   	-- open files
-	'bridge/**/*.lua', 		-- open files
+	'src/**/*.lua',
 }

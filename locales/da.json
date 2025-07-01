@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Nummerplade Tilpasning",
+        "Submit": "Indsend",
+        "Description": "Indtast venligst den nummerpladetekst du ønsker"
+    },
+    "Checks": {
+        "NoInput": "Ingen nummerpladetekst indsendt",
+        "NotLongEnough": "Nummerpladetekst er ikke lang nok",
+        "TooLong": "Nummerpladetekst er for lang",
+        "MustBeNetworked": "Køretøjet skal være netværket",
+        "NoVehicle": "Intet køretøj tæt nok på",
+        "LetterNumber": "Skal kun være bogstaver eller tal",
+        "PlateTaken": "Et køretøj med denne nummerplade eksisterer allerede",
+        "NotVehicleOwner": "Du ejer ikke køretøjet med nummerplade %s",
+        "BadWord": "Du kan ikke bruge upassende ord",
+        "InsideVehicle": "Du skal gøre dette uden for køretøjet"
+    },
+    "Success": {
+        "PlateSet": "Køretøjsnummerplade opdateret fra %s til %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Indstiller Nummerplade"
+    }
+}

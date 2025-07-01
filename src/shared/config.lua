@@ -11,17 +11,13 @@ Config = {}
 
 Config.PlateItemName = "customizableplate"
 
-Config.EnableOxExclusive = true
+Config.EnableOxExclusive = false
 
 Config.ProgressBarEnabled = true
 
-Config.FilteredWords = {
-	"badword",
-	"fuck",
-	"asshole",
-}
+Config.FilteredWords = { "badword", "fuck", "asshole", }
 
 Config.Settings = {
-	MinCharachters = 1,
-	Maxcharacters = 8,
+	MinCharacters = 1,
+	MaxCharacters = 8,
 }

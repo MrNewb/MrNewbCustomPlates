@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Registreringsskylt Anpassning",
+        "Submit": "Skicka",
+        "Description": "Vänligen ange den registreringsskylttext du vill ha"
+    },
+    "Checks": {
+        "NoInput": "Ingen registreringsskylttext skickad",
+        "NotLongEnough": "Registreringsskylttext är inte tillräckligt lång",
+        "TooLong": "Registreringsskylttext är för lång",
+        "MustBeNetworked": "Fordonet måste vara nätverkat",
+        "NoVehicle": "Inget fordon tillräckligt nära",
+        "LetterNumber": "Måste bara vara bokstäver eller siffror",
+        "PlateTaken": "Ett fordon med denna registreringsskylt existerar redan",
+        "NotVehicleOwner": "Du äger inte fordonet med registreringsskylt %s",
+        "BadWord": "Du kan inte använda olämpliga ord",
+        "InsideVehicle": "Du måste göra detta utanför fordonet"
+    },
+    "Success": {
+        "PlateSet": "Fordonsregistreringsskylt uppdaterad från %s till %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Ställer In Registreringsskylt"
+    }
+}

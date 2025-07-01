@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Skiltpersonalisering",
+        "Submit": "Send Inn",
+        "Description": "Vennligst skriv inn skiltteksten du ønsker"
+    },
+    "Checks": {
+        "NoInput": "Ingen skilttekst sendt inn",
+        "NotLongEnough": "Skiltteksten er ikke lang nok",
+        "TooLong": "Skiltteksten er for lang",
+        "MustBeNetworked": "Kjøretøyet må være nettverket",
+        "NoVehicle": "Ingen kjøretøy nært nok",
+        "LetterNumber": "Må bare være bokstaver eller tall",
+        "PlateTaken": "Et kjøretøy med dette skiltet eksisterer allerede",
+        "NotVehicleOwner": "Du eier ikke kjøretøyet med skilt %s",
+        "BadWord": "Du kan ikke bruke upassende ord",
+        "InsideVehicle": "Du må gjøre dette utenfor kjøretøyet"
+    },
+    "Success": {
+        "PlateSet": "Kjøretøyskilt oppdatert fra %s til %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Setter Skilt"
+    }
+}

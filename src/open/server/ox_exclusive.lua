@@ -1,5 +1,6 @@
--- if you change Config.PlateItemName then change it on line 11
 if not Config.EnableOxExclusive then return end
+if GetResourceState('ox_inventory') ~= 'started' then return end
+
 local hookId = exports.ox_inventory:registerHook('swapItems', function(payload)
     if payload.fromType == "player" and payload.toType == "player" then
         return false
@@ -8,6 +9,6 @@ local hookId = exports.ox_inventory:registerHook('swapItems', function(payload)
     end
 end, {
     itemFilter = {
-        customizableplate = true,
+        [Config.PlateItemName] = true,
     },
 })

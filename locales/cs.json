@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Přizpůsobení Značky",
+        "Submit": "Odeslat",
+        "Description": "Prosím zadejte text značky, který chcete"
+    },
+    "Checks": {
+        "NoInput": "Nebyl odeslán text značky",
+        "NotLongEnough": "Text značky není dostatečně dlouhý",
+        "TooLong": "Text značky je příliš dlouhý",
+        "MustBeNetworked": "Vozidlo musí být v síti",
+        "NoVehicle": "Žádné vozidlo dostatečně blízko",
+        "LetterNumber": "Musí být pouze písmena nebo čísla",
+        "PlateTaken": "Vozidlo s touto značkou již existuje",
+        "NotVehicleOwner": "Nevlastníte vozidlo se značkou %s",
+        "BadWord": "Nemůžete používat nevhodná slova",
+        "InsideVehicle": "Musíte to udělat mimo vozidlo"
+    },
+    "Success": {
+        "PlateSet": "Značka vozidla aktualizována z %s na %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Nastavování Značky"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Nommerbord Aanpassing",
+        "Submit": "Stuur",
+        "Description": "Voer asseblief die nommerbord teks in wat jy wil hê"
+    },
+    "Checks": {
+        "NoInput": "Geen nommerbord teks ingestuur nie",
+        "NotLongEnough": "Nommerbord teks is nie lank genoeg nie",
+        "TooLong": "Nommerbord teks is te lank",
+        "MustBeNetworked": "Die voertuig moet genewerk wees",
+        "NoVehicle": "Geen voertuig naby genoeg nie",
+        "LetterNumber": "Moet net letters of nommers wees",
+        "PlateTaken": "'n Voertuig met hierdie nommerbord bestaan reeds",
+        "NotVehicleOwner": "Jy besit nie die voertuig met nommerbord %s nie",
+        "BadWord": "Jy kan nie ongepaste woorde gebruik nie",
+        "InsideVehicle": "Jy moet dit buite die voertuig doen"
+    },
+    "Success": {
+        "PlateSet": "Voertuig nommerbord opgedateer van %s na %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Stel Nommerbord"
+    }
+}

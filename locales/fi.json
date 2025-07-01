@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Kilven Muokkaus",
+        "Submit": "Lähetä",
+        "Description": "Syötä haluamasi kilven teksti"
+    },
+    "Checks": {
+        "NoInput": "Kilven tekstiä ei lähetetty",
+        "NotLongEnough": "Kilven teksti ei ole tarpeeksi pitkä",
+        "TooLong": "Kilven teksti on liian pitkä",
+        "MustBeNetworked": "Ajoneuvon täytyy olla verkossa",
+        "NoVehicle": "Ei ajoneuvoa tarpeeksi lähellä",
+        "LetterNumber": "Täytyy olla vain kirjaimia tai numeroita",
+        "PlateTaken": "Ajoneuvo tällä kilvellä on jo olemassa",
+        "NotVehicleOwner": "Et omista ajoneuvoa kilvellä %s",
+        "BadWord": "Et voi käyttää sopimatonta kieltä",
+        "InsideVehicle": "Sinun täytyy tehdä tämä ajoneuvon ulkopuolella"
+    },
+    "Success": {
+        "PlateSet": "Ajoneuvon kilpi päivitetty %s:sta %s:aan"
+    },
+    "Progressbar": {
+        "ProgressText": "Asetetaan Kilpeä"
+    }
+}

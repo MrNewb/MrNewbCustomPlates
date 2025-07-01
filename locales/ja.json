@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "プレートカスタマイズ",
+        "Submit": "送信",
+        "Description": "希望するプレートテキストを入力してください"
+    },
+    "Checks": {
+        "NoInput": "プレートテキストが送信されていません",
+        "NotLongEnough": "プレートテキストが短すぎます",
+        "TooLong": "プレートテキストが長すぎます",
+        "MustBeNetworked": "車両はネットワーク化されている必要があります",
+        "NoVehicle": "十分近くに車両がありません",
+        "LetterNumber": "文字または数字のみである必要があります",
+        "PlateTaken": "このプレートの車両は既に存在します",
+        "NotVehicleOwner": "プレート %s の車両を所有していません",
+        "BadWord": "不適切な言葉は使用できません",
+        "InsideVehicle": "車両の外で行う必要があります"
+    },
+    "Success": {
+        "PlateSet": "車両プレートが %s から %s に更新されました"
+    },
+    "Progressbar": {
+        "ProgressText": "プレート設定中"
+    }
+}

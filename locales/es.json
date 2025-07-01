@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Personalización de Placa",
+        "Submit": "Enviar",
+        "Description": "Por favor ingrese el texto de placa que desea"
+    },
+    "Checks": {
+        "NoInput": "No se envió texto de placa",
+        "NotLongEnough": "El texto de la placa no es lo suficientemente largo",
+        "TooLong": "El texto de la placa es demasiado largo",
+        "MustBeNetworked": "El vehículo debe estar en red",
+        "NoVehicle": "No hay vehículo lo suficientemente cerca",
+        "LetterNumber": "Debe ser solo letras o números",
+        "PlateTaken": "Ya existe un vehículo con esta placa",
+        "NotVehicleOwner": "No eres dueño del vehículo con placa %s",
+        "BadWord": "No puedes usar palabras inapropiadas",
+        "InsideVehicle": "Debes hacer esto fuera del vehículo"
+    },
+    "Success": {
+        "PlateSet": "Placa del vehículo actualizada de %s a %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Configurando Placa"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "車牌客製化",
+        "Submit": "提交",
+        "Description": "請輸入您想要的車牌文字"
+    },
+    "Checks": {
+        "NoInput": "未提交車牌文字",
+        "NotLongEnough": "車牌文字不夠長",
+        "TooLong": "車牌文字太長",
+        "MustBeNetworked": "車輛必須聯網",
+        "NoVehicle": "沒有足夠近的車輛",
+        "LetterNumber": "必須只能是字母或數字",
+        "PlateTaken": "已存在使用此車牌的車輛",
+        "NotVehicleOwner": "您不擁有車牌為 %s 的車輛",
+        "BadWord": "您不能使用不當詞彙",
+        "InsideVehicle": "您必須在車輛外進行此操作"
+    },
+    "Success": {
+        "PlateSet": "車輛車牌已從 %s 更新為 %s"
+    },
+    "Progressbar": {
+        "ProgressText": "設置車牌中"
+    }
+}

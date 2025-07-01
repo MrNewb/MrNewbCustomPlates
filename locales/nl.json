@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Kenteken Aanpassing",
+        "Submit": "Verzenden",
+        "Description": "Voer de kentekentekst in die je wilt"
+    },
+    "Checks": {
+        "NoInput": "Geen kentekentekst ingediend",
+        "NotLongEnough": "Kentekentekst is niet lang genoeg",
+        "TooLong": "Kentekentekst is te lang",
+        "MustBeNetworked": "Het voertuig moet netwerk zijn",
+        "NoVehicle": "Geen voertuig dichtbij genoeg",
+        "LetterNumber": "Moet alleen letters of cijfers zijn",
+        "PlateTaken": "Een voertuig met dit kenteken bestaat al",
+        "NotVehicleOwner": "Je bezit het voertuig met kenteken %s niet",
+        "BadWord": "Je kunt geen ongepaste woorden gebruiken",
+        "InsideVehicle": "Je moet dit buiten het voertuig doen"
+    },
+    "Success": {
+        "PlateSet": "Voertuigkenteken bijgewerkt van %s naar %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Kenteken Instellen"
+    }
+}

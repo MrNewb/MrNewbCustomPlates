@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Plaka Özelleştirme",
+        "Submit": "Gönder",
+        "Description": "Lütfen istediğiniz plaka metnini girin"
+    },
+    "Checks": {
+        "NoInput": "Plaka metni gönderilmedi",
+        "NotLongEnough": "Plaka metni yeterince uzun değil",
+        "TooLong": "Plaka metni çok uzun",
+        "MustBeNetworked": "Araç ağa bağlı olmalı",
+        "NoVehicle": "Yeterince yakın araç yok",
+        "LetterNumber": "Sadece harf veya rakam olmalı",
+        "PlateTaken": "Bu plakaya sahip bir araç zaten mevcut",
+        "NotVehicleOwner": "%s plakasına sahip aracın sahibi değilsiniz",
+        "BadWord": "Uygunsuz kelimeler kullanamazsınız",
+        "InsideVehicle": "Bunu araç dışında yapmalısınız"
+    },
+    "Success": {
+        "PlateSet": "Araç plakası %s'den %s'e güncellendi"
+    },
+    "Progressbar": {
+        "ProgressText": "Plaka Ayarlanıyor"
+    }
+}

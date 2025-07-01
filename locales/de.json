@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Kennzeichen Anpassung",
+        "Submit": "Senden",
+        "Description": "Bitte geben Sie den gewünschten Kennzeichentext ein"
+    },
+    "Checks": {
+        "NoInput": "Kein Kennzeichentext eingereicht",
+        "NotLongEnough": "Der Kennzeichentext ist nicht lang genug",
+        "TooLong": "Der Kennzeichentext ist zu lang",
+        "MustBeNetworked": "Das Fahrzeug muss vernetzt sein",
+        "NoVehicle": "Kein Fahrzeug nah genug",
+        "LetterNumber": "Muss nur Buchstaben oder Zahlen sein",
+        "PlateTaken": "Ein Fahrzeug mit diesem Kennzeichen existiert bereits",
+        "NotVehicleOwner": "Sie besitzen das Fahrzeug mit Kennzeichen %s nicht",
+        "BadWord": "Sie können keine unangemessenen Wörter verwenden",
+        "InsideVehicle": "Sie müssen dies außerhalb des Fahrzeugs tun"
+    },
+    "Success": {
+        "PlateSet": "Fahrzeugkennzeichen aktualisiert von %s zu %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Kennzeichen Setzen"
+    }
+}

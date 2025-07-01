@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Personalizare Placă",
+        "Submit": "Trimite",
+        "Description": "Te rog introdu textul plăcii pe care îl dorești"
+    },
+    "Checks": {
+        "NoInput": "Nu a fost trimis text pentru placă",
+        "NotLongEnough": "Textul plăcii nu este suficient de lung",
+        "TooLong": "Textul plăcii este prea lung",
+        "MustBeNetworked": "Vehiculul trebuie să fie în rețea",
+        "NoVehicle": "Niciun vehicul suficient de aproape",
+        "LetterNumber": "Trebuie să fie doar litere sau cifre",
+        "PlateTaken": "Un vehicul cu această placă există deja",
+        "NotVehicleOwner": "Nu dețineți vehiculul cu placa %s",
+        "BadWord": "Nu puteți folosi cuvinte nepotrivite",
+        "InsideVehicle": "Trebuie să faceți asta în afara vehiculului"
+    },
+    "Success": {
+        "PlateSet": "Placa vehiculului actualizată de la %s la %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Setare Placă"
+    }
+}

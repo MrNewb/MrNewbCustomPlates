@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Personalizzazione Targa",
+        "Submit": "Invia",
+        "Description": "Per favore inserisci il testo della targa che vuoi"
+    },
+    "Checks": {
+        "NoInput": "Nessun testo targa inviato",
+        "NotLongEnough": "Il testo della targa non è abbastanza lungo",
+        "TooLong": "Il testo della targa è troppo lungo",
+        "MustBeNetworked": "Il veicolo deve essere in rete",
+        "NoVehicle": "Nessun veicolo abbastanza vicino",
+        "LetterNumber": "Deve essere solo lettere o numeri",
+        "PlateTaken": "Un veicolo con questa targa esiste già",
+        "NotVehicleOwner": "Non possiedi il veicolo con targa %s",
+        "BadWord": "Non puoi usare parole inappropriate",
+        "InsideVehicle": "Devi farlo fuori dal veicolo"
+    },
+    "Success": {
+        "PlateSet": "Targa del veicolo aggiornata da %s a %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Impostazione Targa"
+    }
+}

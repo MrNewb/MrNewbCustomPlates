@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Rendszám Testreszabás",
+        "Submit": "Elküld",
+        "Description": "Kérjük, adja meg a kívánt rendszám szöveget"
+    },
+    "Checks": {
+        "NoInput": "Nem lett rendszám szöveg elküldve",
+        "NotLongEnough": "A rendszám szöveg nem elég hosszú",
+        "TooLong": "A rendszám szöveg túl hosszú",
+        "MustBeNetworked": "A járműnek hálózatban kell lennie",
+        "NoVehicle": "Nincs elég közel jármű",
+        "LetterNumber": "Csak betűk vagy számok lehetnek",
+        "PlateTaken": "Egy jármű ezzel a rendszámmal már létezik",
+        "NotVehicleOwner": "Nem birtokolja a %s rendszámú járművet",
+        "BadWord": "Nem használhat helytelen szavakat",
+        "InsideVehicle": "Ezt a járművön kívül kell megtennie"
+    },
+    "Success": {
+        "PlateSet": "Jármű rendszám frissítve %s-ról %s-ra"
+    },
+    "Progressbar": {
+        "ProgressText": "Rendszám Beállítása"
+    }
+}
