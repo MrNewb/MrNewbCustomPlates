@@ -23,7 +23,7 @@ docs available at https://mrnewbs-scrips.gitbook.io/guide
 ## 📦 Dependencies
 
 ### Required Dependencies
-- **[Community Bridge](https://github.com/The-Order-Of-The-Sacred-Framework/community_bridge)** - Essential for inventory system compatibility
+- **[Community Bridge](https://github.com/TheOrderFivem/community_bridge/tree/main)** - Essential for inventory system compatibility
 - **[ox_lib](https://github.com/overextended/ox_lib)** - Modern library for FiveM resources
 - **FiveM Server** - Latest recommended version
 
