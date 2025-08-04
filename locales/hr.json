@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Prilagodba tablice",
+        "Submit": "Pošalji",
+        "Description": "Unesite tekst tablice koji želite"
+    },
+    "Checks": {
+        "NoInput": "Nije unesen tekst tablice",
+        "NotLongEnough": "Tekst tablice nije dovoljno dug",
+        "TooLong": "Tekst tablice je predug",
+        "MustBeNetworked": "Vozilo mora biti umreženo",
+        "NoVehicle": "Nema vozila dovoljno blizu",
+        "LetterNumber": "Dozvoljena su samo slova ili brojevi",
+        "PlateTaken": "Vozilo s ovom tablicom već postoji",
+        "NotVehicleOwner": "Niste vlasnik vozila s tablicom %s",
+        "BadWord": "Ne možete koristiti neprikladne riječi",
+        "InsideVehicle": "Morate biti izvan vozila"
+    },
+    "Success": {
+        "PlateSet": "Tablica vozila promijenjena s %s na %s"
+    },
+    "Progressbar": {
+        "ProgressText": "Postavljanje tablice"
+    }
+}
