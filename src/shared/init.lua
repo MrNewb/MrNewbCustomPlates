@@ -1,11 +1,7 @@
 Bridge = exports.community_bridge:Bridge()
 
-RegisterNetEvent('Bridge:Refresh', function(moduleName, wrappedModule)
-    Bridge[moduleName] = wrappedModule
-end)
-
-function locale(message)
-    return Bridge.Language.Locale(message)
+function locale(message, ...)
+    return Bridge.Language.Locale(message, ...)
 end
 
 function DoDebugPrint(message)
@@ -34,9 +30,9 @@ function RunBadWordFilter(data)
 end
 
 if not IsDuplicityVersion() then
-    function NotifyPlayer(message, _type, time)
-        Bridge.Notify.SendNotify(message, _type, time)
-    end
+    NotifyPlayer =  Bridge.Notify.SendNotify
+
+    OpenInput = Bridge.Input.Open
 
     function GetClosestVehicle(coords, distance, includePlayerVeh)
         local vehicleEntity, vehicleCoords, _vehicleNetID = Bridge.Utility.GetClosestVehicle(coords, distance, includePlayerVeh)
@@ -46,17 +42,11 @@ end
 
 if not IsDuplicityVersion() then return end
 
-function RemoveItem(src, itemName, amount, slot, metadata)
-    Bridge.Inventory.RemoveItem(src, itemName, amount, slot, metadata)
-end
+RemoveItem = Bridge.Inventory.RemoveItem
 
-function UpdateInventoryPlate(oldPlate, newPlate)
-    Bridge.Inventory.UpdatePlate(oldPlate, newPlate)
-end
+UpdateInventoryPlate = Bridge.Inventory.UpdatePlate
 
-function NotifyPlayer(src, message, _type, time)
-    Bridge.Notify.SendNotify(src, message, _type, time)
-end
+NotifyPlayer = Bridge.Notify.SendNotify
 
 Bridge.Framework.RegisterUsableItem(Config.PlateItemName, function(src, itemData)
     local data = Bridge.Callback.Trigger("MrNewbCustomPlates:Callback:SetPlate", src)
@@ -64,7 +54,7 @@ Bridge.Framework.RegisterUsableItem(Config.PlateItemName, function(src, itemData
     RunPlateChecks(src, data, itemData.slot)
 end)
 
-AddEventHandler('onResourceStart', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
-    Bridge.Version.VersionChecker("MrNewb/MrNewbCustomPlates")
+AddEventHandler('onResourceStart', function(resource)
+    if resource ~= GetCurrentResourceName() then return end
+    Bridge.Version.VersionChecker("MrNewb/patchnotes", false, true, "MrNewbCustomPlates", "MrNewb/MrNewbCustomPlates")
 end)

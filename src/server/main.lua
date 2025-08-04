@@ -32,12 +32,12 @@ function RunPlateChecks(src, data, slot)
     newPlate = string.upper(newPlate)
     if not RunBadWordFilter(newPlate) then return end
     local owner = VerifyVehicleOwnerShip(src, trimmedString)
-    if not owner then return NotifyPlayer(src, string.format(locale("Checks.NotVehicleOwner"), trimmedString), "error", 5000) end
+    if not owner then return NotifyPlayer(src, locale("Checks.NotVehicleOwner", trimmedString), "error", 5000) end
     if not UpdateFrameworkPlate(src, newPlate, trimmedString) then return end
     UpdateInventoryPlate(trimmedString, newPlate)
     RemoveItem(src, Config.PlateItemName, 1, slot, nil)
     SetVehicleNumberPlateText(vehicle, newPlate)
-    NotifyPlayer(src, string.format(locale("Success.PlateSet"), trimmedString, newPlate), "success", 5000)
+    NotifyPlayer(src, locale("Success.PlateSet", trimmedString, newPlate), "success", 5000)
     Wait(250)
     TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlate", src, newPlate, trimmedString, netId)
     TriggerClientEvent("MrNewbCustomPlates:Client:UpdatePlateText", -1, newPlate, netId)

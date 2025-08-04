@@ -14,7 +14,7 @@ function CreateInputMenu()
             max = Config.Settings.MaxCharacters,
         },
     }
-    local inputData = Bridge.Input.Open(locale("PlateCustomize.Title"), data, false, locale("PlateCustomize.Submit"))
+    local inputData = OpenInput(locale("PlateCustomize.Title"), data, false, locale("PlateCustomize.Submit"))
     return VerifyInputChecks(inputData)
 end
 
@@ -35,18 +35,15 @@ end
 
 function BeginProgressBar()
     if not Config.ProgressBarEnabled then return end
-    Bridge.ProgressBar.Open({
+    local success = Bridge.ProgressBar.Open({
         duration = 5000,
         label = locale("Progressbar.ProgressText"),
         disable = { move = true, combat = true },
-        anim = {
-            dict = "amb@prop_human_parking_meter@female@base",
-            clip = "base_female",
-            flag = 49,
-        }
-    }, function(cancelled)
-        --print(cancelled and "Cancelled" or "Complete")
-    end)
+        anim = { dict = "amb@prop_human_parking_meter@female@base", clip = "base_female", },
+        flag = 49,
+        canCancel = true,
+    })
+    return success
 end
 
 function GetPlayerVehicleData()

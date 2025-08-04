@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 name "MrNewbCustomPlatesV2"
 author "MrNewb"
-version "2.1.0"
+version "2.1.1"
 description "Custom Plates for FiveM with support for multiple frameworks and community bridge."
 
 shared_scripts {
