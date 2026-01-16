@@ -2,9 +2,9 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 name "MrNewbCustomPlatesV2"
-author "MrNewb"
-version "2.1.3"
 description "MrNewbsCustomPlates is a custom license plate for fivem that supports multiple frameworks and features a bad word filter."
+author "MrNewb"
+version "2.2.0"
 
 shared_scripts {
 	'core/init.lua',
@@ -33,7 +33,5 @@ dependencies {
 }
 
 escrow_ignore {
-	'core/*.lua',
-	'data/*.lua',
-	'modules/**/*.lua',
+	'**/*.lua',
 }
