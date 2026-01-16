@@ -1,0 +1,25 @@
+{
+    "PlateCustomize": {
+        "Title": "Plate Customization, Ye Scallywag",
+        "Submit": "Aye, Submit",
+        "Description": "Enter yer desired plate text, matey"
+    },
+    "Checks": {
+        "NoInput": "No plate text be submitted, arrr",
+        "NotLongEnough": "Yer plate text be too short, ye landlubber",
+        "TooLong": "Yer plate text be too long fer the ship",
+        "MustBeNetworked": "This vessel must be networked, savvy?",
+        "NoVehicle": "No ship be close enough to plunder",
+        "LetterNumber": "Must be letters or numbers only, no funny business",
+        "PlateTaken": "Another vessel already flies this flag",
+        "NotVehicleOwner": "Ye don't be ownin' the vessel with plate %s",
+        "BadWord": "Ye can't be usin' such foul language, even fer a pirate",
+        "InsideVehicle": "Ye must be outside yer vessel to do this"
+    },
+    "Success": {
+        "PlateSet": "Ship's flag be updated from %s to %s, arrr!"
+    },
+    "Progressbar": {
+        "ProgressText": "Settin' the Flag"
+    }
+}

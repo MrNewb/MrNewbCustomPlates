@@ -3,21 +3,22 @@ game 'gta5'
 lua54 'yes'
 name "MrNewbCustomPlatesV2"
 author "MrNewb"
-version "2.1.1"
-description "Custom Plates for FiveM with support for multiple frameworks and community bridge."
+version "2.1.3"
+description "MrNewbsCustomPlates is a custom license plate for fivem that supports multiple frameworks and features a bad word filter."
 
 shared_scripts {
-	'src/shared/config.lua',
-	'src/shared/init.lua',
+	'core/init.lua',
+	'data/config.lua',
+	'modules/**/shared/*.lua',
 }
 
 client_scripts {
-	'src/client/*.lua',
+	'modules/**/client/*.lua',
 }
 
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
-	'src/server/*.lua',
+	'modules/**/server/*.lua',
 }
 
 files {
@@ -32,5 +33,7 @@ dependencies {
 }
 
 escrow_ignore {
-	'src/**/*.lua',
+	'core/*.lua',
+	'data/*.lua',
+	'modules/**/*.lua',
 }
