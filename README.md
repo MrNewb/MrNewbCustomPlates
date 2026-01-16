@@ -1,7 +1,7 @@
 [![MrNewbsCustomPlate](https://i.imgur.com/UPyWXAs.png)](https://i.imgur.com/UPyWXAs.png)
 
 # MrNewbsCustomPlates
-docs available at https://mrnewbs-scrips.gitbook.io/guide
+Install docs available at https://mrnewbs-scrips.gitbook.io/guide
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/mrnewb)
 [![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/mrnewbscripts)
@@ -16,7 +16,7 @@ docs available at https://mrnewbs-scrips.gitbook.io/guide
 
 - 🎨 **Custom License Plates**: Create and manage personalized license plates
 - 🔗 **Multi-Inventory Support**: Compatible with various inventory systems through Community Bridge
-- ⚡ **Performance Optimized**: Lightweight and efficient resource design
+- ⚡ **Performance Optimized**: Lightweight and efficient resource
 - 🛠️ **Highly Configurable**: Extensive customization options
 - 🔄 **Regular Updates**: Continuous improvements and feature additions
 
@@ -34,17 +34,6 @@ docs available at https://mrnewbs-scrips.gitbook.io/guide
 - OX Inventory
 - And many more through the bridge system
 
-## 🚀 Installation Guide
-
-1. **Download Community Bridge** 
-2. **Install Community Bridge** following the documentation
-3. **Download MrNewbsCustomPlates** and place it in your resources folder
-4. **Add to server.cfg**:
-   ```cfg
-   ensure community_bridge
-   ensure MrNewbCustomPlates
-   ```
-5. **Restart your server**
 
 📚 **Detailed Documentation**: Available at [https://mrnewbs-scrips.gitbook.io/guide](https://mrnewbs-scrips.gitbook.io/guide)
 
@@ -62,12 +51,20 @@ The Community Bridge integration provides unprecedented compatibility across mul
 Special thanks to **Decay Studios** for creating the stunning inventory icons used in this release. 
 Join their community: [Decay Studios Discord](https://discord.gg/yDXZwZPjdN)
 
-## 💬 Community & Support
+## Support & Documentation
 
-- **Discord Community**: [Join our growing community](https://discord.gg/mrnewbscripts)
-- **Documentation**: [Complete guide and tutorials](https://mrnewbs-scrips.gitbook.io/guide)
-- **Issues & Suggestions**: Use Discord for the fastest response
-- **Updates**: Follow our Discord for the latest announcements
+- **[Tebex](https://mrnewbscripts.tebex.io/)**
+- **[Install guide](https://mrnewbs-scrips.gitbook.io/guide)**
+- **[Youtube](https://www.youtube.com/@mrnewb2819)**
+- **[GitHub Repository](https://github.com/MrNewb/MrNewbCustomPlates)**
+
+
+### Community
+[![Discord](https://discordapp.com/api/guilds/1204398264812830720/widget.png?style=banner2)](https://discord.gg/mrnewbscripts)
+
+**Join our Discord for support, feature requests, and community feedback.**
+
+---
 
 ## 📄 License
 
