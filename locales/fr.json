@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Personnalisation de Plaque",
         "Submit": "Soumettre",
-        "Description": "Veuillez entrer le texte de plaque que vous voulez"
+        "Cancel": "Annuler",
+        "Description": "Veuillez entrer le texte de plaque que vous voulez",
+        "InputLabel": "Texte de plaque",
+        "MinLengthHint": "%s minimum",
+        "Invalid": "Ce texte de plaque n'est pas autorisé"
     },
     "Checks": {
         "NoInput": "Aucun texte de plaque soumis",
@@ -14,7 +18,11 @@
         "PlateTaken": "Un véhicule avec cette plaque existe déjà",
         "NotVehicleOwner": "Vous ne possédez pas le véhicule avec la plaque %s",
         "BadWord": "Vous ne pouvez pas utiliser de mots inappropriés",
-        "InsideVehicle": "Vous devez faire ceci à l'extérieur du véhicule"
+        "InsideVehicle": "Vous devez faire ceci à l'extérieur du véhicule",
+        "FrameworkUnsupported": "Le framework de votre serveur n'est pas pris en charge",
+        "NoItem": "Vous n'avez pas de plaque à poser",
+        "SamePlate": "Le véhicule utilise déjà cette plaque",
+        "UiUnavailable": "L'interface de plaque n'a pas pu se charger"
     },
     "Success": {
         "PlateSet": "Plaque du véhicule mise à jour de %s à %s"

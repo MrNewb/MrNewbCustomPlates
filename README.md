@@ -1,113 +1,34 @@
-[![MrNewbsCustomPlate](https://i.imgur.com/UPyWXAs.png)](https://i.imgur.com/UPyWXAs.png)
+# MrNewbCustomPlates
 
-# MrNewbsCustomPlates
-Install docs available at https://mrnewbs-scrips.gitbook.io/guide
+![MrNewbCustomPlates V3](MrNewbCustomPlates-V3.png)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/mrnewb)
-[![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/mrnewbscripts)
-[![FiveM](https://img.shields.io/badge/FiveM-Resource-F40552?style=for-the-badge&logo=fivem)](https://fivem.net/)
-[![Views](https://img.shields.io/badge/Views-1.2K+-brightgreen?style=for-the-badge&logo=eye)](https://github.com/mrnewb)
-[![License](https://img.shields.io/badge/License-Custom-blue?style=for-the-badge)](#license)
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R76BIM9)
+Usable plate item. Player types a plate, it is filtered, then applied to a nearby owned vehicle.
 
-> **A comprehensive custom license plate system for FiveM servers with extensive inventory bridge support**
+[Documentation](https://mrnewb.github.io/docs/mrnewbcustomplates) · [GitHub](https://github.com/MrNewb/MrNewbCustomPlates) · [Discord](https://discord.gg/mrnewbscripts) · [Preview](https://www.youtube.com/watch?v=fGq9QBig3j4)
 
-## 📋 Features
+[![MrNewbCustomPlates preview](https://img.youtube.com/vi/fGq9QBig3j4/hqdefault.jpg)](https://www.youtube.com/watch?v=fGq9QBig3j4)
 
-- 🎨 **Custom License Plates**: Create and manage personalized license plates
-- 🔗 **Multi-Inventory Support**: Compatible with various inventory systems through Community Bridge
-- ⚡ **Performance Optimized**: Lightweight and efficient resource
-- 🛠️ **Highly Configurable**: Extensive customization options
-- 🔄 **Regular Updates**: Continuous improvements and feature additions
+## Install
 
-## 📦 Dependencies
+Needs [ox_lib](https://github.com/overextended/ox_lib), [oxmysql](https://github.com/overextended/oxmysql), and [Newb_Bridge](https://github.com/MrNewb/Newb_Bridge).
 
-### Required Dependencies
-- **[Community Bridge](https://github.com/MrNewb/community_bridge)** - Essential for inventory/framework/menu compatibility
-- **[oxmysql](https://github.com/overextended/oxmysql)** - Database management
-- **FiveM Server** - Latest recommended version
+```cfg
+ensure ox_lib
+ensure oxmysql
+ensure Newb_Bridge
+ensure MrNewbCustomPlates
+```
 
-### Supported Inventory Systems (via Community Bridge)
-- QB-Core Inventory
-- ESX Inventory
-- Origin Inventory
-- OX Inventory
-- And many more through the bridge system
+Do not add `server.export` on the ox_inventory item. Omit `consume` on the item def.
 
+Item defs: [docs](https://mrnewb.github.io/docs/mrnewbcustomplates/install).
 
-📚 **Detailed Documentation**: Available at [https://mrnewbs-scrips.gitbook.io/guide](https://mrnewbs-scrips.gitbook.io/guide)
+## Config
 
-## 🎯 Resource Support
+`configs/config.lua` — `PlateItemName` (default `customizableplate`), length, filtered words, progress bar toggle, optional ox exclusive (blocks giving the item to another player).
 
-The Community Bridge integration provides unprecedented compatibility across multiple inventory systems. This means:
+The player must be outside the vehicle and next to a networked vehicle they own. The server re-checks plate text, distance, ownership, and that the item is still in inventory before writing.
 
-- ✅ **Universal Compatibility**: Works with virtually any supported inventory system
-- ✅ **Origin Integration**: Full support for Origin and other popular frameworks
-- ✅ **Future-Proof**: Automatic compatibility with new inventory systems added to the bridge
-- ✅ **Seamless Migration**: Easy switching between different inventory systems
+Optional: [MrNewbVehicleKeys](https://github.com/MrNewb/MrNewbVehicleKeysV2) so key metadata follows plate changes.
 
-## 🙏 Acknowledgments
-
-Special thanks to **Decay Studios** for creating the stunning inventory icons used in this release. 
-Join their community: [Decay Studios Discord](https://discord.gg/yDXZwZPjdN)
-
-## Support & Documentation
-
-- **[Tebex](https://mrnewbscripts.tebex.io/)**
-- **[Install guide](https://mrnewbs-scrips.gitbook.io/guide)**
-- **[Youtube](https://www.youtube.com/@mrnewb2819)**
-- **[GitHub Repository](https://github.com/MrNewb/MrNewbCustomPlates)**
-
-
-### Community
-[![Discord](https://discordapp.com/api/guilds/1204398264812830720/widget.png?style=banner2)](https://discord.gg/mrnewbscripts)
-
-**Join our Discord for support, feature requests, and community feedback.**
-
----
-
-## 📄 License
-
-This resource is provided under a custom license. Please respect the terms of use and do not redistribute without permission.
-
-## ☕ Support the Developer
-
-If you enjoy this resource and want to support continued development:
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R76BIM9)
-
-## ❓ Frequently Asked Questions
-
-<details>
-<summary><strong>🔧 Installation & Setup</strong></summary>
-
-### Q: Do I need Community Bridge to use this resource?
-**A:** Yes, Community Bridge is a required dependency. This resource will not function without it.
-
-### Q: Which inventory systems are supported?
-**A:** Through Community Bridge, we support QB-Core, ESX, Origin, OX Inventory, and many others. The bridge handles compatibility automatically.
-
-### Q: The resource isn't working after installation. What should I do?
-**A:** Make sure you have:
-1. Installed Community Bridge first
-2. Added both resources to your server.cfg in the correct order
-3. Restarted your server completely
-4. Check the console for any error messages
-
-</details>
-
-<details>
-<summary><strong>💬 Support & Community</strong></summary>
-
-### Q: Where can I get help if I have issues?
-**A:** Join our Discord community for the fastest support. We have dedicated channels for troubleshooting.
-
-### Q: Can I request new features?
-**A:** Absolutely! Join our Discord and share your ideas in the suggestions channel.
-
-### Q: Is this resource free?
-**A:** Yes, this resource is free to use. If you enjoy it, consider supporting the developer through Ko-fi.
-
----
-
-*Made with ❤️ by MrNewb*
+Inventory icons by [Decay Studios](https://discord.gg/yDXZwZPjdN).

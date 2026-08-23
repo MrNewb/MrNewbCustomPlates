@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Personalização de Placa",
         "Submit": "Enviar",
-        "Description": "Por favor digite o texto da placa que você quer"
+        "Cancel": "Cancelar",
+        "Description": "Por favor digite o texto da placa que você quer",
+        "InputLabel": "Texto da placa",
+        "MinLengthHint": "mínimo %s",
+        "Invalid": "Esse texto de placa não é permitido"
     },
     "Checks": {
         "NoInput": "Nenhum texto de placa enviado",
@@ -14,7 +18,11 @@
         "PlateTaken": "Um veículo com esta placa já existe",
         "NotVehicleOwner": "Você não possui o veículo com placa %s",
         "BadWord": "Você não pode usar palavras inapropriadas",
-        "InsideVehicle": "Você deve fazer isso fora do veículo"
+        "InsideVehicle": "Você deve fazer isso fora do veículo",
+        "FrameworkUnsupported": "O framework do seu servidor não é suportado",
+        "NoItem": "Você não tem uma placa para colocar",
+        "SamePlate": "O veículo já usa essa placa",
+        "UiUnavailable": "A interface da placa não carregou"
     },
     "Success": {
         "PlateSet": "Placa do veículo atualizada de %s para %s"

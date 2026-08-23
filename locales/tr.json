@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Plaka Özelleştirme",
         "Submit": "Gönder",
-        "Description": "Lütfen istediğiniz plaka metnini girin"
+        "Cancel": "İptal",
+        "Description": "Lütfen istediğiniz plaka metnini girin",
+        "InputLabel": "Plaka metni",
+        "MinLengthHint": "en az %s",
+        "Invalid": "Bu plaka metnine izin verilmiyor"
     },
     "Checks": {
         "NoInput": "Plaka metni gönderilmedi",
@@ -14,7 +18,11 @@
         "PlateTaken": "Bu plakaya sahip bir araç zaten mevcut",
         "NotVehicleOwner": "%s plakasına sahip aracın sahibi değilsiniz",
         "BadWord": "Uygunsuz kelimeler kullanamazsınız",
-        "InsideVehicle": "Bunu araç dışında yapmalısınız"
+        "InsideVehicle": "Bunu araç dışında yapmalısınız",
+        "FrameworkUnsupported": "Sunucunuzun frameworkü desteklenmiyor",
+        "NoItem": "Takılacak bir plakanız yok",
+        "SamePlate": "Araç zaten bu plakayı kullanıyor",
+        "UiUnavailable": "Plaka arayüzü yüklenemedi"
     },
     "Success": {
         "PlateSet": "Araç plakası %s'den %s'e güncellendi"

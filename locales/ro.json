@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Personalizare Placă",
         "Submit": "Trimite",
-        "Description": "Te rog introdu textul plăcii pe care îl dorești"
+        "Cancel": "Anulează",
+        "Description": "Te rog introdu textul plăcii pe care îl dorești",
+        "InputLabel": "Textul plăcuței",
+        "MinLengthHint": "minim %s",
+        "Invalid": "Acest text de plăcuță nu este permis"
     },
     "Checks": {
         "NoInput": "Nu a fost trimis text pentru placă",
@@ -14,7 +18,11 @@
         "PlateTaken": "Un vehicul cu această placă există deja",
         "NotVehicleOwner": "Nu dețineți vehiculul cu placa %s",
         "BadWord": "Nu puteți folosi cuvinte nepotrivite",
-        "InsideVehicle": "Trebuie să faceți asta în afara vehiculului"
+        "InsideVehicle": "Trebuie să faceți asta în afara vehiculului",
+        "FrameworkUnsupported": "Framework-ul serverului tău nu este suportat",
+        "NoItem": "Nu ai o plăcuță de montat",
+        "SamePlate": "Vehiculul folosește deja această plăcuță",
+        "UiUnavailable": "Interfața plăcuței nu s-a încărcat"
     },
     "Success": {
         "PlateSet": "Placa vehiculului actualizată de la %s la %s"

@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Prilagodba tablice",
         "Submit": "Pošalji",
-        "Description": "Unesite tekst tablice koji želite"
+        "Cancel": "Odustani",
+        "Description": "Unesite tekst tablice koji želite",
+        "InputLabel": "Tekst registracije",
+        "MinLengthHint": "najmanje %s",
+        "Invalid": "Taj tekst registracije nije dopušten"
     },
     "Checks": {
         "NoInput": "Nije unesen tekst tablice",
@@ -14,7 +18,11 @@
         "PlateTaken": "Vozilo s ovom tablicom već postoji",
         "NotVehicleOwner": "Niste vlasnik vozila s tablicom %s",
         "BadWord": "Ne možete koristiti neprikladne riječi",
-        "InsideVehicle": "Morate biti izvan vozila"
+        "InsideVehicle": "Morate biti izvan vozila",
+        "FrameworkUnsupported": "Framework vašeg poslužitelja nije podržan",
+        "NoItem": "Nemate tablicu koju biste postavili",
+        "SamePlate": "Vozilo već koristi tu tablicu",
+        "UiUnavailable": "Sučelje za registraciju se nije učitalo"
     },
     "Success": {
         "PlateSet": "Tablica vozila promijenjena s %s na %s"

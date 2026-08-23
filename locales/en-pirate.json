@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Plate Customization, Ye Scallywag",
         "Submit": "Aye, Submit",
-        "Description": "Enter yer desired plate text, matey"
+        "Cancel": "Belay",
+        "Description": "Enter yer desired plate text, matey",
+        "InputLabel": "Plate scribbles",
+        "MinLengthHint": "%s marks at least",
+        "Invalid": "That plate scribble be forbidden, matey"
     },
     "Checks": {
         "NoInput": "No plate text be submitted, arrr",
@@ -14,7 +18,11 @@
         "PlateTaken": "Another vessel already flies this flag",
         "NotVehicleOwner": "Ye don't be ownin' the vessel with plate %s",
         "BadWord": "Ye can't be usin' such foul language, even fer a pirate",
-        "InsideVehicle": "Ye must be outside yer vessel to do this"
+        "InsideVehicle": "Ye must be outside yer vessel to do this",
+        "FrameworkUnsupported": "Yer server's framework be uncharted waters",
+        "NoItem": "Ye have no plate in yer hold to fit",
+        "SamePlate": "The vessel already flies that very flag",
+        "UiUnavailable": "The plate workbench refused to open"
     },
     "Success": {
         "PlateSet": "Ship's flag be updated from %s to %s, arrr!"

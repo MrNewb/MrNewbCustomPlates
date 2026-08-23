@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "車牌客製化",
         "Submit": "提交",
-        "Description": "請輸入您想要的車牌文字"
+        "Cancel": "取消",
+        "Description": "請輸入您想要的車牌文字",
+        "InputLabel": "車牌文字",
+        "MinLengthHint": "最少 %s 個字",
+        "Invalid": "不允許使用該車牌文字"
     },
     "Checks": {
         "NoInput": "未提交車牌文字",
@@ -14,7 +18,11 @@
         "PlateTaken": "已存在使用此車牌的車輛",
         "NotVehicleOwner": "您不擁有車牌為 %s 的車輛",
         "BadWord": "您不能使用不當詞彙",
-        "InsideVehicle": "您必須在車輛外進行此操作"
+        "InsideVehicle": "您必須在車輛外進行此操作",
+        "FrameworkUnsupported": "不支援你伺服器的框架",
+        "NoItem": "你沒有可安裝的車牌",
+        "SamePlate": "該車輛已在使用此車牌",
+        "UiUnavailable": "車牌介面載入失敗"
     },
     "Success": {
         "PlateSet": "車輛車牌已從 %s 更新為 %s"

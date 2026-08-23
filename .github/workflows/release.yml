@@ -1,0 +1,121 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'fxmanifest.lua'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  RELEASE_NAME: MrNewbCustomPlates
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      should_release: ${{ steps.meta.outputs.should_release }}
+      version: ${{ steps.meta.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: Detect fxmanifest version change
+        id: meta
+        run: |
+          CURRENT=$(grep -E '^version ' fxmanifest.lua | sed -E "s/^version[[:space:]]+['\"]([^'\"]+)['\"].*/\1/")
+          echo "version=$CURRENT" >> "$GITHUB_OUTPUT"
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "should_release=true" >> "$GITHUB_OUTPUT"
+            echo "Manual run; releasing version $CURRENT"
+            exit 0
+          fi
+
+          BEFORE="${{ github.event.before }}"
+          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || [ -z "$BEFORE" ]; then
+            echo "should_release=true" >> "$GITHUB_OUTPUT"
+            echo "Initial or force push; releasing version $CURRENT"
+            exit 0
+          fi
+
+          PREVIOUS=$(git show "$BEFORE:fxmanifest.lua" 2>/dev/null | grep -E '^version ' | sed -E "s/^version[[:space:]]+['\"]([^'\"]+)['\"].*/\1/" || true)
+          if [ "$CURRENT" = "$PREVIOUS" ]; then
+            echo "should_release=false" >> "$GITHUB_OUTPUT"
+            echo "fxmanifest changed but version is still $CURRENT; skipping release."
+          else
+            echo "should_release=true" >> "$GITHUB_OUTPUT"
+            echo "Version updated: ${PREVIOUS:-unknown} -> $CURRENT"
+          fi
+
+  build-and-release:
+    runs-on: ubuntu-latest
+    needs: check-version
+    if: needs.check-version.outputs.should_release == 'true'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+
+      - name: Build web UI
+        working-directory: web
+        run: |
+          bun install --frozen-lockfile
+          bun run build
+
+      - name: Prepare release package
+        env:
+          VERSION: ${{ needs.check-version.outputs.version }}
+        run: |
+          RELEASE_ROOT="release/${RELEASE_NAME}"
+          mkdir -p "$RELEASE_ROOT/web/build"
+
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.gitattributes' \
+            --exclude '.gitignore' \
+            --exclude '.github' \
+            --exclude '.cursor' \
+            --exclude '.cursorrules' \
+            --exclude '.impeccable' \
+            --exclude 'release' \
+            --exclude 'web' \
+            --exclude 'node_modules' \
+            --exclude 'DESIGN.md' \
+            --exclude 'PRODUCT.md' \
+            ./ "$RELEASE_ROOT/"
+
+          rsync -a web/build/ "$RELEASE_ROOT/web/build/"
+
+      - name: Create zip archive
+        env:
+          VERSION: ${{ needs.check-version.outputs.version }}
+        run: |
+          cd release
+          zip -r "../${RELEASE_NAME}-${VERSION}.zip" "${RELEASE_NAME}"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ env.RELEASE_NAME }}-${{ needs.check-version.outputs.version }}
+          path: ${{ env.RELEASE_NAME }}-${{ needs.check-version.outputs.version }}.zip
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ needs.check-version.outputs.version }}
+          name: v${{ needs.check-version.outputs.version }}
+          files: ${{ env.RELEASE_NAME }}-${{ needs.check-version.outputs.version }}.zip
+          generate_release_notes: true

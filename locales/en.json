@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Plate Customization",
         "Submit": "Submit",
-        "Description": "Please enter the plate text you want"
+        "Cancel": "Cancel",
+        "Description": "Enter your custom plate text below",
+        "InputLabel": "License plate text",
+        "MinLengthHint": "%s minimum",
+        "Invalid": "That plate text is not allowed"
     },
     "Checks": {
         "NoInput": "No plate text submitted",
@@ -14,7 +18,11 @@
         "PlateTaken": "A vehicle with this plate already exists",
         "NotVehicleOwner": "You do not own the vehicle with plate %s",
         "BadWord": "You cannot use inappropriate words",
-        "InsideVehicle": "You must do this outside the vehicle"
+        "InsideVehicle": "You must do this outside the vehicle",
+        "FrameworkUnsupported": "Your server framework is not supported",
+        "NoItem": "You do not have a plate to fit",
+        "SamePlate": "The vehicle already uses that plate",
+        "UiUnavailable": "The plate interface failed to load"
     },
     "Success": {
         "PlateSet": "Vehicle plate updated from %s to %s"

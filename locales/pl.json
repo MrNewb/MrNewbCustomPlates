@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Dostosowanie Tablicy",
         "Submit": "Wyślij",
-        "Description": "Proszę wprowadzić tekst tablicy, który chcesz"
+        "Cancel": "Anuluj",
+        "Description": "Proszę wprowadzić tekst tablicy, który chcesz",
+        "InputLabel": "Tekst tablicy",
+        "MinLengthHint": "minimum %s",
+        "Invalid": "Ten tekst tablicy jest niedozwolony"
     },
     "Checks": {
         "NoInput": "Nie przesłano tekstu tablicy",
@@ -14,7 +18,11 @@
         "PlateTaken": "Pojazd z tą tablicą już istnieje",
         "NotVehicleOwner": "Nie posiadasz pojazdu z tablicą %s",
         "BadWord": "Nie możesz używać nieodpowiednich słów",
-        "InsideVehicle": "Musisz to zrobić poza pojazdem"
+        "InsideVehicle": "Musisz to zrobić poza pojazdem",
+        "FrameworkUnsupported": "Framework twojego serwera nie jest obsługiwany",
+        "NoItem": "Nie masz tablicy do zamontowania",
+        "SamePlate": "Pojazd już używa tej tablicy",
+        "UiUnavailable": "Nie udało się załadować interfejsu tablicy"
     },
     "Success": {
         "PlateSet": "Tablica pojazdu zaktualizowana z %s na %s"

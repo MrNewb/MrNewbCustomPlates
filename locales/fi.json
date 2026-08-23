@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Kilven Muokkaus",
         "Submit": "Lähetä",
-        "Description": "Syötä haluamasi kilven teksti"
+        "Cancel": "Peruuta",
+        "Description": "Syötä haluamasi kilven teksti",
+        "InputLabel": "Kilpiteksti",
+        "MinLengthHint": "vähintään %s",
+        "Invalid": "Tätä kilpitekstiä ei sallita"
     },
     "Checks": {
         "NoInput": "Kilven tekstiä ei lähetetty",
@@ -14,7 +18,11 @@
         "PlateTaken": "Ajoneuvo tällä kilvellä on jo olemassa",
         "NotVehicleOwner": "Et omista ajoneuvoa kilvellä %s",
         "BadWord": "Et voi käyttää sopimatonta kieltä",
-        "InsideVehicle": "Sinun täytyy tehdä tämä ajoneuvon ulkopuolella"
+        "InsideVehicle": "Sinun täytyy tehdä tämä ajoneuvon ulkopuolella",
+        "FrameworkUnsupported": "Palvelimesi frameworkia ei tueta",
+        "NoItem": "Sinulla ei ole kilpeä asennettavaksi",
+        "SamePlate": "Ajoneuvossa on jo tämä kilpi",
+        "UiUnavailable": "Kilpikäyttöliittymän lataus epäonnistui"
     },
     "Success": {
         "PlateSet": "Ajoneuvon kilpi päivitetty %s:sta %s:aan"

@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Skiltpersonalisering",
         "Submit": "Send Inn",
-        "Description": "Vennligst skriv inn skiltteksten du ønsker"
+        "Cancel": "Avbryt",
+        "Description": "Vennligst skriv inn skiltteksten du ønsker",
+        "InputLabel": "Skilttekst",
+        "MinLengthHint": "minst %s",
+        "Invalid": "Den skiltteksten er ikke tillatt"
     },
     "Checks": {
         "NoInput": "Ingen skilttekst sendt inn",
@@ -14,7 +18,11 @@
         "PlateTaken": "Et kjøretøy med dette skiltet eksisterer allerede",
         "NotVehicleOwner": "Du eier ikke kjøretøyet med skilt %s",
         "BadWord": "Du kan ikke bruke upassende ord",
-        "InsideVehicle": "Du må gjøre dette utenfor kjøretøyet"
+        "InsideVehicle": "Du må gjøre dette utenfor kjøretøyet",
+        "FrameworkUnsupported": "Serverens framework støttes ikke",
+        "NoItem": "Du har ikke et skilt å montere",
+        "SamePlate": "Kjøretøyet bruker allerede det skiltet",
+        "UiUnavailable": "Skiltgrensesnittet kunne ikke lastes"
     },
     "Success": {
         "PlateSet": "Kjøretøyskilt oppdatert fra %s til %s"

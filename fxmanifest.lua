@@ -1,37 +1,47 @@
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
-name "MrNewbCustomPlatesV2"
-description "MrNewbsCustomPlates is a custom license plate for fivem that supports multiple frameworks and features a bad word filter."
-author "MrNewb"
-version "2.2.0"
+name 'MrNewbCustomPlates'
+description 'Custom license plate item with bad-word filter and multi-framework support'
+author 'MrNewb'
+version '3.0.0'
 
 shared_scripts {
-	'core/init.lua',
-	'data/config.lua',
-	'modules/**/shared/*.lua',
+    '@ox_lib/init.lua',
+    '@Newb_Bridge/import.lua',
+    'configs/config.lua',
+    'resource/shared/plate_helpers.lua',
 }
 
 client_scripts {
-	'modules/**/client/*.lua',
+    'resource/client/plate.lua',
 }
 
 server_scripts {
-	'@oxmysql/lib/MySQL.lua',
-	'modules/**/server/*.lua',
+    '@oxmysql/lib/MySQL.lua',
+    'resource/server/plates.lua',
+    'resource/server/ox_inventory.lua',
 }
 
+ui_page 'web/build/index.html'
+
 files {
-	'locales/*.json',
+    'locales/*.json',
+    'web/build/index.html',
+    'web/build/**/*',
 }
 
 dependencies {
-	'/server:6116',
-	'/onesync',
-	'oxmysql',
-	'community_bridge',
+    '/server:6116',
+    '/onesync',
+    'ox_lib',
+    'oxmysql',
+    'Newb_Bridge',
 }
 
 escrow_ignore {
-	'**/*.lua',
+    'configs/*.lua',
+    'locales/*.json',
+    'resource/**/*.lua',
+    'web/**/*',
 }

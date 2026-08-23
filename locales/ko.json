@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "번호판 커스터마이징",
         "Submit": "제출",
-        "Description": "원하는 번호판 텍스트를 입력하세요"
+        "Cancel": "취소",
+        "Description": "원하는 번호판 텍스트를 입력하세요",
+        "InputLabel": "번호판 텍스트",
+        "MinLengthHint": "최소 %s자",
+        "Invalid": "해당 번호판 텍스트는 사용할 수 없습니다"
     },
     "Checks": {
         "NoInput": "번호판 텍스트가 제출되지 않았습니다",
@@ -14,7 +18,11 @@
         "PlateTaken": "이 번호판을 가진 차량이 이미 존재합니다",
         "NotVehicleOwner": "번호판 %s인 차량을 소유하고 있지 않습니다",
         "BadWord": "부적절한 단어를 사용할 수 없습니다",
-        "InsideVehicle": "차량 밖에서 해야 합니다"
+        "InsideVehicle": "차량 밖에서 해야 합니다",
+        "FrameworkUnsupported": "서버 프레임워크가 지원되지 않습니다",
+        "NoItem": "장착할 번호판이 없습니다",
+        "SamePlate": "차량이 이미 해당 번호판을 사용 중입니다",
+        "UiUnavailable": "번호판 화면을 불러오지 못했습니다"
     },
     "Success": {
         "PlateSet": "차량 번호판이 %s에서 %s로 업데이트되었습니다"

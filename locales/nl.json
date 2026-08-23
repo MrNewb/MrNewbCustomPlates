@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Kenteken Aanpassing",
         "Submit": "Verzenden",
-        "Description": "Voer de kentekentekst in die je wilt"
+        "Cancel": "Annuleren",
+        "Description": "Voer de kentekentekst in die je wilt",
+        "InputLabel": "Kentekentekst",
+        "MinLengthHint": "minimaal %s",
+        "Invalid": "Die kentekentekst is niet toegestaan"
     },
     "Checks": {
         "NoInput": "Geen kentekentekst ingediend",
@@ -14,7 +18,11 @@
         "PlateTaken": "Een voertuig met dit kenteken bestaat al",
         "NotVehicleOwner": "Je bezit het voertuig met kenteken %s niet",
         "BadWord": "Je kunt geen ongepaste woorden gebruiken",
-        "InsideVehicle": "Je moet dit buiten het voertuig doen"
+        "InsideVehicle": "Je moet dit buiten het voertuig doen",
+        "FrameworkUnsupported": "Het framework van je server wordt niet ondersteund",
+        "NoItem": "Je hebt geen kentekenplaat om te monteren",
+        "SamePlate": "Het voertuig gebruikt dat kenteken al",
+        "UiUnavailable": "De kentekeninterface kon niet laden"
     },
     "Success": {
         "PlateSet": "Voertuigkenteken bijgewerkt van %s naar %s"

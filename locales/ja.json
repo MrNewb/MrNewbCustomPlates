@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "プレートカスタマイズ",
         "Submit": "送信",
-        "Description": "希望するプレートテキストを入力してください"
+        "Cancel": "キャンセル",
+        "Description": "希望するプレートテキストを入力してください",
+        "InputLabel": "ナンバープレート",
+        "MinLengthHint": "最低 %s 文字",
+        "Invalid": "そのプレートテキストは使用できません"
     },
     "Checks": {
         "NoInput": "プレートテキストが送信されていません",
@@ -14,7 +18,11 @@
         "PlateTaken": "このプレートの車両は既に存在します",
         "NotVehicleOwner": "プレート %s の車両を所有していません",
         "BadWord": "不適切な言葉は使用できません",
-        "InsideVehicle": "車両の外で行う必要があります"
+        "InsideVehicle": "車両の外で行う必要があります",
+        "FrameworkUnsupported": "お使いのサーバーのフレームワークはサポートされていません",
+        "NoItem": "取り付けるプレートを持っていません",
+        "SamePlate": "車両はすでにそのプレートを使用しています",
+        "UiUnavailable": "プレート画面の読み込みに失敗しました"
     },
     "Success": {
         "PlateSet": "車両プレートが %s から %s に更新されました"

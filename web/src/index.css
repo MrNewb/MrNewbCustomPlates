@@ -1,0 +1,49 @@
+:root {
+  --surface: #1a1b1e;
+  --surface-2: #25262b;
+  --surface-hover: #2c2e33;
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #c1c2c5;
+  --text-dim: #909296;
+  --primary: #1971c2;
+  --primary-hover: #1864ab;
+  --on-primary: #ffffff;
+  --focus: #228be6;
+  --danger: #f03e3e;
+  --radius: 4px;
+  --plate-ink: #1b2f55;
+  color-scheme: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text);
+  background: transparent !important;
+  color-scheme: normal !important;
+}
+
+::selection {
+  background: var(--focus);
+  color: var(--on-primary);
+}
+
+input,
+textarea,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

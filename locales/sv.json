@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Registreringsskylt Anpassning",
         "Submit": "Skicka",
-        "Description": "Vänligen ange den registreringsskylttext du vill ha"
+        "Cancel": "Avbryt",
+        "Description": "Vänligen ange den registreringsskylttext du vill ha",
+        "InputLabel": "Skylttext",
+        "MinLengthHint": "minst %s",
+        "Invalid": "Den skyltexten är inte tillåten"
     },
     "Checks": {
         "NoInput": "Ingen registreringsskylttext skickad",
@@ -14,7 +18,11 @@
         "PlateTaken": "Ett fordon med denna registreringsskylt existerar redan",
         "NotVehicleOwner": "Du äger inte fordonet med registreringsskylt %s",
         "BadWord": "Du kan inte använda olämpliga ord",
-        "InsideVehicle": "Du måste göra detta utanför fordonet"
+        "InsideVehicle": "Du måste göra detta utanför fordonet",
+        "FrameworkUnsupported": "Serverns framework stöds inte",
+        "NoItem": "Du har ingen skylt att montera",
+        "SamePlate": "Fordonet använder redan den skylten",
+        "UiUnavailable": "Skyltgränssnittet kunde inte laddas"
     },
     "Success": {
         "PlateSet": "Fordonsregistreringsskylt uppdaterad från %s till %s"

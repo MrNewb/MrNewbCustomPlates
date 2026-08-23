@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Přizpůsobení Značky",
         "Submit": "Odeslat",
-        "Description": "Prosím zadejte text značky, který chcete"
+        "Cancel": "Zrušit",
+        "Description": "Prosím zadejte text značky, který chcete",
+        "InputLabel": "Text SPZ",
+        "MinLengthHint": "minimálně %s",
+        "Invalid": "Tento text SPZ není povolen"
     },
     "Checks": {
         "NoInput": "Nebyl odeslán text značky",
@@ -14,7 +18,11 @@
         "PlateTaken": "Vozidlo s touto značkou již existuje",
         "NotVehicleOwner": "Nevlastníte vozidlo se značkou %s",
         "BadWord": "Nemůžete používat nevhodná slova",
-        "InsideVehicle": "Musíte to udělat mimo vozidlo"
+        "InsideVehicle": "Musíte to udělat mimo vozidlo",
+        "FrameworkUnsupported": "Framework vašeho serveru není podporován",
+        "NoItem": "Nemáte značku, kterou byste mohli nasadit",
+        "SamePlate": "Vozidlo už tuto značku používá",
+        "UiUnavailable": "Rozhraní pro SPZ se nepodařilo načíst"
     },
     "Success": {
         "PlateSet": "Značka vozidla aktualizována z %s na %s"

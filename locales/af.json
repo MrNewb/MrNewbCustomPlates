@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Nommerbord Aanpassing",
         "Submit": "Stuur",
-        "Description": "Voer asseblief die nommerbord teks in wat jy wil hê"
+        "Cancel": "Kanselleer",
+        "Description": "Voer asseblief die nommerbord teks in wat jy wil hê",
+        "InputLabel": "Kentekenteks",
+        "MinLengthHint": "%s minimum",
+        "Invalid": "Daardie kentekenteks word nie toegelaat nie"
     },
     "Checks": {
         "NoInput": "Geen nommerbord teks ingestuur nie",
@@ -14,7 +18,11 @@
         "PlateTaken": "'n Voertuig met hierdie nommerbord bestaan reeds",
         "NotVehicleOwner": "Jy besit nie die voertuig met nommerbord %s nie",
         "BadWord": "Jy kan nie ongepaste woorde gebruik nie",
-        "InsideVehicle": "Jy moet dit buite die voertuig doen"
+        "InsideVehicle": "Jy moet dit buite die voertuig doen",
+        "FrameworkUnsupported": "Jou bediener se raamwerk word nie ondersteun nie",
+        "NoItem": "Jy het nie 'n nommerbord om aan te bring nie",
+        "SamePlate": "Die voertuig gebruik reeds daardie nommerbord",
+        "UiUnavailable": "Die nommerbord-koppelvlak kon nie laai nie"
     },
     "Success": {
         "PlateSet": "Voertuig nommerbord opgedateer van %s na %s"

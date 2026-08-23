@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Personalizzazione Targa",
         "Submit": "Invia",
-        "Description": "Per favore inserisci il testo della targa che vuoi"
+        "Cancel": "Annulla",
+        "Description": "Per favore inserisci il testo della targa che vuoi",
+        "InputLabel": "Testo targa",
+        "MinLengthHint": "minimo %s",
+        "Invalid": "Questo testo della targa non è consentito"
     },
     "Checks": {
         "NoInput": "Nessun testo targa inviato",
@@ -14,7 +18,11 @@
         "PlateTaken": "Un veicolo con questa targa esiste già",
         "NotVehicleOwner": "Non possiedi il veicolo con targa %s",
         "BadWord": "Non puoi usare parole inappropriate",
-        "InsideVehicle": "Devi farlo fuori dal veicolo"
+        "InsideVehicle": "Devi farlo fuori dal veicolo",
+        "FrameworkUnsupported": "Il framework del tuo server non è supportato",
+        "NoItem": "Non hai una targa da montare",
+        "SamePlate": "Il veicolo usa già quella targa",
+        "UiUnavailable": "L'interfaccia della targa non si è caricata"
     },
     "Success": {
         "PlateSet": "Targa del veicolo aggiornata da %s a %s"

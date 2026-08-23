@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Kennzeichen Anpassung",
         "Submit": "Senden",
-        "Description": "Bitte geben Sie den gewünschten Kennzeichentext ein"
+        "Cancel": "Abbrechen",
+        "Description": "Bitte geben Sie den gewünschten Kennzeichentext ein",
+        "InputLabel": "Kennzeichentext",
+        "MinLengthHint": "mindestens %s",
+        "Invalid": "Dieser Kennzeichentext ist nicht erlaubt"
     },
     "Checks": {
         "NoInput": "Kein Kennzeichentext eingereicht",
@@ -14,7 +18,11 @@
         "PlateTaken": "Ein Fahrzeug mit diesem Kennzeichen existiert bereits",
         "NotVehicleOwner": "Sie besitzen das Fahrzeug mit Kennzeichen %s nicht",
         "BadWord": "Sie können keine unangemessenen Wörter verwenden",
-        "InsideVehicle": "Sie müssen dies außerhalb des Fahrzeugs tun"
+        "InsideVehicle": "Sie müssen dies außerhalb des Fahrzeugs tun",
+        "FrameworkUnsupported": "Das Framework Ihres Servers wird nicht unterstützt",
+        "NoItem": "Sie haben kein Kennzeichen zum Anbringen",
+        "SamePlate": "Das Fahrzeug verwendet dieses Kennzeichen bereits",
+        "UiUnavailable": "Die Kennzeichen-Oberfläche konnte nicht geladen werden"
     },
     "Success": {
         "PlateSet": "Fahrzeugkennzeichen aktualisiert von %s zu %s"

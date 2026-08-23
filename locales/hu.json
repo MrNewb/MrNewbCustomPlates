@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Rendszám Testreszabás",
         "Submit": "Elküld",
-        "Description": "Kérjük, adja meg a kívánt rendszám szöveget"
+        "Cancel": "Mégse",
+        "Description": "Kérjük, adja meg a kívánt rendszám szöveget",
+        "InputLabel": "Rendszám szövege",
+        "MinLengthHint": "legalább %s",
+        "Invalid": "Ez a rendszámszöveg nem engedélyezett"
     },
     "Checks": {
         "NoInput": "Nem lett rendszám szöveg elküldve",
@@ -14,7 +18,11 @@
         "PlateTaken": "Egy jármű ezzel a rendszámmal már létezik",
         "NotVehicleOwner": "Nem birtokolja a %s rendszámú járművet",
         "BadWord": "Nem használhat helytelen szavakat",
-        "InsideVehicle": "Ezt a járművön kívül kell megtennie"
+        "InsideVehicle": "Ezt a járművön kívül kell megtennie",
+        "FrameworkUnsupported": "A szervered frameworkje nem támogatott",
+        "NoItem": "Nincs felszerelhető rendszámtáblád",
+        "SamePlate": "A jármű már ezt a rendszámot használja",
+        "UiUnavailable": "A rendszám felület nem töltődött be"
     },
     "Success": {
         "PlateSet": "Jármű rendszám frissítve %s-ról %s-ra"

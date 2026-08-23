@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/archivo-black.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.app {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: max(24px, env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-right, 0px))
+    max(24px, env(safe-area-inset-bottom, 0px)) max(24px, env(safe-area-inset-left, 0px));
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 21, 23, 0.82);
+  pointer-events: none;
+}
+
+.panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  min-width: 0;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.panel__header {
+  margin-bottom: 16px;
+}
+
+.panel__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  overflow-wrap: break-word;
+}
+
+.panel__description {
+  margin-top: 4px;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+  overflow-wrap: break-word;
+}
+
+.plate-stage {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.plate-frame {
+  position: relative;
+  width: min(100%, 500px);
+  aspect-ratio: 2 / 1;
+  overflow: visible;
+  background: transparent;
+}
+
+.plate-frame__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+.plate-frame__input {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 80%;
+  padding-block: 0;
+  padding-inline: 0.25em;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  text-align: center;
+  font-family: 'Archivo Black', 'Arial Black', Impact, sans-serif;
+  font-size: clamp(2.5rem, 7.5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--plate-ink);
+  caret-color: var(--plate-ink);
+  text-shadow:
+    1px 1px 0 rgba(255, 255, 255, 0.45),
+    -1px -1px 0 rgba(0, 0, 0, 0.28),
+    0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.plate-frame__input:focus,
+.plate-frame__input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.plate-frame__input[data-length='5'],
+.plate-frame__input[data-length='6'] {
+  font-size: clamp(2.3rem, 7vw, 3.7rem);
+  letter-spacing: 0.07em;
+  width: 82%;
+}
+
+.plate-frame__input[data-length='7'] {
+  font-size: clamp(2.1rem, 6.4vw, 3.35rem);
+  letter-spacing: 0.04em;
+  width: 84%;
+}
+
+.plate-frame__input[data-length='8'] {
+  font-size: clamp(1.95rem, 5.9vw, 3.05rem);
+  letter-spacing: 0.02em;
+  width: 86%;
+  padding-inline: 0.1em;
+}
+
+.plate-counter {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.plate-error {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--danger);
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 8px;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.btn {
+  min-width: 96px;
+  min-height: 44px;
+  padding-block: 10px;
+  padding-inline: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.btn--ghost {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.btn--ghost:active:not(:disabled) {
+  background: var(--surface-hover);
+}
+
+.btn--primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.btn--primary:active:not(:disabled) {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .btn--ghost:hover:not(:disabled) {
+    background: var(--surface-hover);
+  }
+
+  .btn--primary:hover:not(:disabled) {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

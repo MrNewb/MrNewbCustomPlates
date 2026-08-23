@@ -2,7 +2,11 @@
     "PlateCustomize": {
         "Title": "Nummerplade Tilpasning",
         "Submit": "Indsend",
-        "Description": "Indtast venligst den nummerpladetekst du ønsker"
+        "Cancel": "Annuller",
+        "Description": "Indtast venligst den nummerpladetekst du ønsker",
+        "InputLabel": "Nummerpladetekst",
+        "MinLengthHint": "mindst %s",
+        "Invalid": "Den nummerpladetekst er ikke tilladt"
     },
     "Checks": {
         "NoInput": "Ingen nummerpladetekst indsendt",
@@ -14,7 +18,11 @@
         "PlateTaken": "Et køretøj med denne nummerplade eksisterer allerede",
         "NotVehicleOwner": "Du ejer ikke køretøjet med nummerplade %s",
         "BadWord": "Du kan ikke bruge upassende ord",
-        "InsideVehicle": "Du skal gøre dette uden for køretøjet"
+        "InsideVehicle": "Du skal gøre dette uden for køretøjet",
+        "FrameworkUnsupported": "Din servers framework understøttes ikke",
+        "NoItem": "Du har ikke en nummerplade at montere",
+        "SamePlate": "Køretøjet bruger allerede den nummerplade",
+        "UiUnavailable": "Nummerplade-grænsefladen kunne ikke indlæses"
     },
     "Success": {
         "PlateSet": "Køretøjsnummerplade opdateret fra %s til %s"
