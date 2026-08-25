@@ -3,31 +3,32 @@
         "Title": "Plate Customization",
         "Submit": "Submit",
         "Cancel": "Cancel",
-        "Description": "Enter your custom plate text below",
+        "Description": "Type the plate you want.",
         "InputLabel": "License plate text",
         "MinLengthHint": "%s minimum",
-        "Invalid": "That plate text is not allowed"
+        "Invalid": "That plate aint happening."
     },
     "Checks": {
-        "NoInput": "No plate text submitted",
-        "NotLongEnough": "Plate text is not long enough",
-        "TooLong": "Plate text is too long",
-        "MustBeNetworked": "The vehicle must be networked",
-        "NoVehicle": "No vehicle close enough",
-        "LetterNumber": "Must be letters or numbers only",
-        "PlateTaken": "A vehicle with this plate already exists",
-        "NotVehicleOwner": "You do not own the vehicle with plate %s",
-        "BadWord": "You cannot use inappropriate words",
-        "InsideVehicle": "You must do this outside the vehicle",
-        "FrameworkUnsupported": "Your server framework is not supported",
-        "NoItem": "You do not have a plate to fit",
-        "SamePlate": "The vehicle already uses that plate",
-        "UiUnavailable": "The plate interface failed to load"
+        "Canceled": "Canceled.",
+        "NoInput": "You didnt type a plate.",
+        "NotLongEnough": "Plate text is too short.",
+        "TooLong": "Plate text is too long.",
+        "MustBeNetworked": "That vehicle isnt networked.",
+        "NoVehicle": "No vehicle close enough.",
+        "LetterNumber": "Letters and numbers only.",
+        "PlateTaken": "That plate is already taken.",
+        "NotVehicleOwner": "You dont own the vehicle with plate %s.",
+        "BadWord": "You cannot use that word.",
+        "InsideVehicle": "Get out of the vehicle first.",
+        "FrameworkUnsupported": "Your framework isnt supported.",
+        "NoItem": "You do not have a plate to fit.",
+        "SamePlate": "That plate is already on it.",
+        "UiUnavailable": "Couldnt open the plate menu."
     },
     "Success": {
-        "PlateSet": "Vehicle plate updated from %s to %s"
+        "PlateSet": "Plate changed from %s to %s."
     },
     "Progressbar": {
-        "ProgressText": "Setting Plate"
+        "ProgressText": "Setting plate"
     }
 }

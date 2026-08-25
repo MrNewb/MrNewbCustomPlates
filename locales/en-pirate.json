@@ -9,6 +9,7 @@
         "Invalid": "That plate scribble be forbidden, matey"
     },
     "Checks": {
+        "Canceled": "Belay that.",
         "NoInput": "No plate text be submitted, arrr",
         "NotLongEnough": "Yer plate text be too short, ye landlubber",
         "TooLong": "Yer plate text be too long fer the ship",

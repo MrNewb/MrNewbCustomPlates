@@ -9,6 +9,7 @@
         "Invalid": "Den skyltexten är inte tillåten"
     },
     "Checks": {
+        "Canceled": "Avbruten.",
         "NoInput": "Ingen registreringsskylttext skickad",
         "NotLongEnough": "Registreringsskylttext är inte tillräckligt lång",
         "TooLong": "Registreringsskylttext är för lång",

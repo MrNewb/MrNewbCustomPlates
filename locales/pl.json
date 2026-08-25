@@ -9,6 +9,7 @@
         "Invalid": "Ten tekst tablicy jest niedozwolony"
     },
     "Checks": {
+        "Canceled": "Anulowano.",
         "NoInput": "Nie przesłano tekstu tablicy",
         "NotLongEnough": "Tekst tablicy nie jest wystarczająco długi",
         "TooLong": "Tekst tablicy jest za długi",

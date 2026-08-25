@@ -9,6 +9,7 @@
         "Invalid": "Ce texte de plaque n'est pas autorisé"
     },
     "Checks": {
+        "Canceled": "Annulé.",
         "NoInput": "Aucun texte de plaque soumis",
         "NotLongEnough": "Le texte de la plaque n'est pas assez long",
         "TooLong": "Le texte de la plaque est trop long",

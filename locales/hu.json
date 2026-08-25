@@ -9,6 +9,7 @@
         "Invalid": "Ez a rendszámszöveg nem engedélyezett"
     },
     "Checks": {
+        "Canceled": "Megszakítva.",
         "NoInput": "Nem lett rendszám szöveg elküldve",
         "NotLongEnough": "A rendszám szöveg nem elég hosszú",
         "TooLong": "A rendszám szöveg túl hosszú",

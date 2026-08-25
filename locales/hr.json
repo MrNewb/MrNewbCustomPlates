@@ -9,6 +9,7 @@
         "Invalid": "Taj tekst registracije nije dopušten"
     },
     "Checks": {
+        "Canceled": "Otkazano.",
         "NoInput": "Nije unesen tekst tablice",
         "NotLongEnough": "Tekst tablice nije dovoljno dug",
         "TooLong": "Tekst tablice je predug",

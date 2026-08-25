@@ -9,6 +9,7 @@
         "Invalid": "Den skiltteksten er ikke tillatt"
     },
     "Checks": {
+        "Canceled": "Avbrutt.",
         "NoInput": "Ingen skilttekst sendt inn",
         "NotLongEnough": "Skiltteksten er ikke lang nok",
         "TooLong": "Skiltteksten er for lang",

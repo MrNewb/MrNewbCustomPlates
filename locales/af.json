@@ -9,6 +9,7 @@
         "Invalid": "Daardie kentekenteks word nie toegelaat nie"
     },
     "Checks": {
+        "Canceled": "Gekanselleer.",
         "NoInput": "Geen nommerbord teks ingestuur nie",
         "NotLongEnough": "Nommerbord teks is nie lank genoeg nie",
         "TooLong": "Nommerbord teks is te lank",

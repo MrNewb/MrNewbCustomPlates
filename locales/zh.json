@@ -9,6 +9,7 @@
         "Invalid": "不允许使用该车牌文本"
     },
     "Checks": {
+        "Canceled": "已取消。",
         "NoInput": "未提交车牌文字",
         "NotLongEnough": "车牌文字不够长",
         "TooLong": "车牌文字太长",

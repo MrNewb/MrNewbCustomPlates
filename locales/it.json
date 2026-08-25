@@ -9,6 +9,7 @@
         "Invalid": "Questo testo della targa non è consentito"
     },
     "Checks": {
+        "Canceled": "Annullato.",
         "NoInput": "Nessun testo targa inviato",
         "NotLongEnough": "Il testo della targa non è abbastanza lungo",
         "TooLong": "Il testo della targa è troppo lungo",

@@ -9,6 +9,7 @@
         "Invalid": "Bu plaka metnine izin verilmiyor"
     },
     "Checks": {
+        "Canceled": "İptal edildi.",
         "NoInput": "Plaka metni gönderilmedi",
         "NotLongEnough": "Plaka metni yeterince uzun değil",
         "TooLong": "Plaka metni çok uzun",

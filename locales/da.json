@@ -9,6 +9,7 @@
         "Invalid": "Den nummerpladetekst er ikke tilladt"
     },
     "Checks": {
+        "Canceled": "Annulleret.",
         "NoInput": "Ingen nummerpladetekst indsendt",
         "NotLongEnough": "Nummerpladetekst er ikke lang nok",
         "TooLong": "Nummerpladetekst er for lang",

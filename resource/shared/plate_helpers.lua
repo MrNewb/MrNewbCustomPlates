@@ -1,7 +1,5 @@
 lib.locale()
 
--- A number plate holds eight characters in game, so a longer value would be truncated
--- on the vehicle while the database kept the full string and every later lookup missed.
 local maxCharacters = math.min(Config.Settings.MaxCharacters or 8, 8)
 local minCharacters = math.min(math.max(Config.Settings.MinCharacters or 1, 1), maxCharacters)
 

@@ -9,6 +9,7 @@
         "Invalid": "Acest text de plăcuță nu este permis"
     },
     "Checks": {
+        "Canceled": "Anulat.",
         "NoInput": "Nu a fost trimis text pentru placă",
         "NotLongEnough": "Textul plăcii nu este suficient de lung",
         "TooLong": "Textul plăcii este prea lung",

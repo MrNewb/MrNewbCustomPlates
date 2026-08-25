@@ -9,6 +9,7 @@
         "Invalid": "Dieser Kennzeichentext ist nicht erlaubt"
     },
     "Checks": {
+        "Canceled": "Abgebrochen.",
         "NoInput": "Kein Kennzeichentext eingereicht",
         "NotLongEnough": "Der Kennzeichentext ist nicht lang genug",
         "TooLong": "Der Kennzeichentext ist zu lang",

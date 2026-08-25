@@ -9,6 +9,7 @@
         "Invalid": "Die kentekentekst is niet toegestaan"
     },
     "Checks": {
+        "Canceled": "Geannuleerd.",
         "NoInput": "Geen kentekentekst ingediend",
         "NotLongEnough": "Kentekentekst is niet lang genoeg",
         "TooLong": "Kentekentekst is te lang",

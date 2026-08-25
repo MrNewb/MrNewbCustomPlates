@@ -9,6 +9,7 @@
         "Invalid": "Tento text SPZ není povolen"
     },
     "Checks": {
+        "Canceled": "Zrušeno.",
         "NoInput": "Nebyl odeslán text značky",
         "NotLongEnough": "Text značky není dostatečně dlouhý",
         "TooLong": "Text značky je příliš dlouhý",

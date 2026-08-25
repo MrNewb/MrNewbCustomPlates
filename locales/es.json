@@ -9,6 +9,7 @@
         "Invalid": "Ese texto de placa no está permitido"
     },
     "Checks": {
+        "Canceled": "Cancelado.",
         "NoInput": "No se envió texto de placa",
         "NotLongEnough": "El texto de la placa no es lo suficientemente largo",
         "TooLong": "El texto de la placa es demasiado largo",

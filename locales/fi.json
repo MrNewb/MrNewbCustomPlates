@@ -9,6 +9,7 @@
         "Invalid": "Tätä kilpitekstiä ei sallita"
     },
     "Checks": {
+        "Canceled": "Peruttu.",
         "NoInput": "Kilven tekstiä ei lähetetty",
         "NotLongEnough": "Kilven teksti ei ole tarpeeksi pitkä",
         "TooLong": "Kilven teksti on liian pitkä",

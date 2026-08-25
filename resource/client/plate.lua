@@ -170,11 +170,9 @@ RegisterNetEvent('MrNewbCustomPlates:Client:UsePlate', function()
     ClearPedTasks(ped)
     if not completed then
         applyingPlate = false
-        return
+        return bridge.notifications.notify({ description = locale('Checks.Canceled'), type = 'error' })
     end
 
-    -- ox_lib's second argument is a debounce, not a timeout, so it stays false and the
-    -- server guarantees a response instead.
     lib.callback.await('MrNewbCustomPlates:Callback:ApplyPlate', false, {
         netId = NetworkGetNetworkIdFromEntity(vehicle),
         plate = plate,
