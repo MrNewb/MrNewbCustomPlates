@@ -38,3 +38,4 @@ Do not add `server.export` on the ox_inventory item. Omit `consume` on the item 
 The player must be outside the vehicle. The server re-checks before writing. Optional: [MrNewbVehicleKeys](https://github.com/MrNewb/MrNewbVehicleKeysV2) so key metadata follows the new plate.
 
 SQL details: [framework](https://mrnewb.github.io/docs/mrnewbcustomplates/install/framework). Inventory icons by [Decay Studios](https://discord.gg/yDXZwZPjdN).
+MrNewb Is A Cutie Patootie
