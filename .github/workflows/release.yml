@@ -163,14 +163,16 @@ jobs:
                 -o -name '*.bak' -o -name '_tmp_*' \) -print; ls -d ./tools ./README.txt ./readme.txt 2>/dev/null || true)
           [ -n "$bad" ] && { echo "::error::dev files in the package:"; echo "$bad"; fail=1; }
 
-          # every local path fxmanifest.lua loads must be present
-          refs=$(grep -v '^\s*--' "$ROOT/fxmanifest.lua" | grep -oP "['\"]\K[^'\"@][^'\"]*/[^'\"]*(?=['\"])" | sort -u)
-          for ref in $refs; do
+          # every local path fxmanifest.lua loads must be present. escrow_ignore patterns are not loaded
+          # files, and the list is read line by line so a pattern such as **/* is never expanded by the shell
+          refs=$(grep -v '^\s*--' "$ROOT/fxmanifest.lua" | sed '/^\s*escrow_ignore/,/^\s*}/d' | grep -oP "['\"]\K[^'\"@][^'\"]*/[^'\"]*(?=['\"])" | sort -u)
+          while IFS= read -r ref; do
+            [ -z "$ref" ] && continue
             case "$ref" in
               *'*'*|*'?'*) ls $ROOT/$ref >/dev/null 2>&1 || { echo "::error::manifest pattern matches nothing: $ref"; fail=1; } ;;
               *) ls -d "$ROOT/$ref"* >/dev/null 2>&1 || { echo "::error::manifest file missing: $ref"; fail=1; } ;;
             esac
-          done
+          done <<< "$refs"
 
           [ $fail -eq 0 ] || exit 1
           echo "Package OK: $(find "$ROOT" -type f | wc -l) files"
