@@ -3,7 +3,7 @@
         "Title": "Personalización de Placa",
         "Submit": "Enviar",
         "Cancel": "Cancelar",
-        "Description": "Por favor ingrese el texto de placa que desea",
+        "Description": "Solo letras y números, %s caracteres.",
         "InputLabel": "Texto de la matrícula",
         "MinLengthHint": "mínimo %s",
         "Invalid": "Ese texto de placa no está permitido"

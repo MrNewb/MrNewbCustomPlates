@@ -3,7 +3,7 @@
         "Title": "Personalizare Placă",
         "Submit": "Trimite",
         "Cancel": "Anulează",
-        "Description": "Te rog introdu textul plăcii pe care îl dorești",
+        "Description": "Doar litere și cifre, %s caractere.",
         "InputLabel": "Textul plăcuței",
         "MinLengthHint": "minim %s",
         "Invalid": "Acest text de plăcuță nu este permis"

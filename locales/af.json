@@ -3,7 +3,7 @@
         "Title": "Nommerbord Aanpassing",
         "Submit": "Stuur",
         "Cancel": "Kanselleer",
-        "Description": "Voer asseblief die nommerbord teks in wat jy wil hê",
+        "Description": "Slegs letters en syfers, %s karakters.",
         "InputLabel": "Kentekenteks",
         "MinLengthHint": "%s minimum",
         "Invalid": "Daardie kentekenteks word nie toegelaat nie"

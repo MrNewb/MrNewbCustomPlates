@@ -3,7 +3,7 @@
         "Title": "プレートカスタマイズ",
         "Submit": "送信",
         "Cancel": "キャンセル",
-        "Description": "希望するプレートテキストを入力してください",
+        "Description": "文字と数字のみ、%s文字。",
         "InputLabel": "ナンバープレート",
         "MinLengthHint": "最低 %s 文字",
         "Invalid": "そのプレートテキストは使用できません"

@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/bebas-neue.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* shadcn zinc dark. Hex only: FiveM's CEF predates oklch. */
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --popover: #18181b;
+  --popover-foreground: #fafafa;
+  --primary: #fafafa;
+  --primary-foreground: #18181b;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #ef4444;
+  --border: #3f3f46;
+  --input: #3f3f46;
+  --ring: #71717a;
+  --radius: 0.625rem;
+  --plate-ink: #1b2f55;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-plate-ink: var(--plate-ink);
+  --color-plate-ghost: #1b2f5559;
+  --color-plate-error: #9f1d1d;
+  --color-scrim: #09090bcc;
+  --radius-sm: calc(var(--radius) - 0.25rem);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.25rem);
+  --font-plate: 'Bebas Neue', 'Arial Narrow', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    /* keep the same share of the screen at 1080p, 1440p and 4K, but never below 13px so the small text stays readable at 720p */
+    font-size: max(calc(100vh / 67.5), 13px);
+    background: transparent !important;
+    color-scheme: normal !important;
+  }
+  body {
+    @apply overflow-hidden text-foreground;
+    background: transparent !important;
+    font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+  }
+  ::selection {
+    background: #3f3f46;
+    color: #fafafa;
+  }
+}

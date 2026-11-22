@@ -3,7 +3,7 @@
         "Title": "Dostosowanie Tablicy",
         "Submit": "Wyślij",
         "Cancel": "Anuluj",
-        "Description": "Proszę wprowadzić tekst tablicy, który chcesz",
+        "Description": "Tylko litery i cyfry, %s znaków.",
         "InputLabel": "Tekst tablicy",
         "MinLengthHint": "minimum %s",
         "Invalid": "Ten tekst tablicy jest niedozwolony"

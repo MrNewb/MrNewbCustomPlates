@@ -3,7 +3,7 @@
         "Title": "Registreringsskylt Anpassning",
         "Submit": "Skicka",
         "Cancel": "Avbryt",
-        "Description": "Vänligen ange den registreringsskylttext du vill ha",
+        "Description": "Endast bokstäver och siffror, %s tecken.",
         "InputLabel": "Skylttext",
         "MinLengthHint": "minst %s",
         "Invalid": "Den skyltexten är inte tillåten"

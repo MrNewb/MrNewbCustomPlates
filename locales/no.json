@@ -3,7 +3,7 @@
         "Title": "Skiltpersonalisering",
         "Submit": "Send Inn",
         "Cancel": "Avbryt",
-        "Description": "Vennligst skriv inn skiltteksten du ønsker",
+        "Description": "Kun bokstaver og tall, %s tegn.",
         "InputLabel": "Skilttekst",
         "MinLengthHint": "minst %s",
         "Invalid": "Den skiltteksten er ikke tillatt"

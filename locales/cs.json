@@ -3,7 +3,7 @@
         "Title": "Přizpůsobení Značky",
         "Submit": "Odeslat",
         "Cancel": "Zrušit",
-        "Description": "Prosím zadejte text značky, který chcete",
+        "Description": "Pouze písmena a číslice, %s znaků.",
         "InputLabel": "Text SPZ",
         "MinLengthHint": "minimálně %s",
         "Invalid": "Tento text SPZ není povolen"

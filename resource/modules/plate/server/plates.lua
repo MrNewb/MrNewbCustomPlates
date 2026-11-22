@@ -14,6 +14,7 @@ local vehicleQueries = {
     },
 }
 
+-- Vehicle props are stored as a JSON string by most frameworks and as a table by some
 local function setJsonPlate(encoded, newPlate)
     if type(encoded) == 'table' then
         encoded.plate = newPlate
@@ -59,22 +60,34 @@ local function updateFrameworkPlate(src, newPlate, oldPlate)
     return true
 end
 
+-- A database error is thrown, not returned, so guard the call or the player would lose the item
+local function updatePlateOrRefund(src, newPlate, oldPlate)
+    local ok, updated = pcall(updateFrameworkPlate, src, newPlate, oldPlate)
+    if ok and updated then return true end
+
+    bridge.inventory.addItem(src, Config.PlateItemName, 1)
+    if not ok then
+        lib.print.error(('plate change failed for %s: %s'):format(src, updated))
+    end
+    return false
+end
+
 local function applyPlate(src, data)
     local ped = GetPlayerPed(src)
-    if ped == 0 or not DoesEntityExist(ped) then return false end
+    if ped == 0 then return false end
     if GetVehiclePedIsIn(ped, false) ~= 0 then
         bridge.notifications.notify(src, { description = locale('Checks.InsideVehicle'), type = 'error' })
         return false
     end
 
-    local valid, newPlate = ValidatePlate(data.plate)
-    if not valid then
-        bridge.notifications.notify(src, { description = locale(newPlate), type = 'error' })
+    local newPlate, reason = ValidatePlate(data.plate)
+    if not newPlate then
+        bridge.notifications.notify(src, { description = locale(reason), type = 'error' })
         return false
     end
 
     local vehicle = NetworkGetEntityFromNetworkId(data.netId)
-    if vehicle == 0 or not DoesEntityExist(vehicle) or GetEntityType(vehicle) ~= 2 or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > 12.0 then
+    if vehicle == 0 or GetEntityType(vehicle) ~= 2 or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > 12.0 then
         bridge.notifications.notify(src, { description = locale('Checks.NoVehicle'), type = 'error' })
         return false
     end
@@ -86,20 +99,21 @@ local function applyPlate(src, data)
         return false
     end
 
-    if bridge.inventory.getItemCount(src, Config.PlateItemName) <= 0 or not bridge.inventory.removeItem(src, Config.PlateItemName, 1) then
+    if not bridge.inventory.removeItem(src, Config.PlateItemName, 1) then
         bridge.notifications.notify(src, { description = locale('Checks.NoItem'), type = 'error' })
         return false
     end
 
-    if not updateFrameworkPlate(src, newPlate, oldPlate) then
-        bridge.inventory.addItem(src, Config.PlateItemName, 1)
-        return false
-    end
+    if not updatePlateOrRefund(src, newPlate, oldPlate) then return false end
 
     SetVehicleNumberPlateText(vehicle, newPlate)
     Entity(vehicle).state:set('ox_lib:setVehicleProperties', { plate = newPlate }, true)
     bridge.vehiclekeys.remove(src, vehicle, oldPlate)
     bridge.vehiclekeys.give(src, vehicle, newPlate)
+
+    if GetResourceState('MrNewb_Garage') == 'started' then
+        exports.MrNewb_Garage:renamePlate(oldPlate, newPlate, data.netId)
+    end
 
     if GetResourceState('jg-mechanic') == 'started' then
         exports['jg-mechanic']:vehiclePlateUpdated(oldPlate, newPlate)
@@ -109,19 +123,21 @@ local function applyPlate(src, data)
     return true
 end
 
-lib.callback.register('MrNewbCustomPlates:Callback:ApplyPlate', function(src, data)
+local function handleApplyPlate(src, data)
     if type(data) ~= 'table' or type(data.plate) ~= 'string' then return false end
     if type(data.netId) ~= 'number' or data.netId < 1 or data.netId // 1 ~= data.netId then return false end
     return applyPlate(src, data)
-end)
+end
 
-bridge.framework.registerItemUse(Config.PlateItemName, function(src)
-    local ped = GetPlayerPed(src)
-    if ped == 0 or not DoesEntityExist(ped) then return end
-    TriggerClientEvent('MrNewbCustomPlates:Client:UsePlate', src)
-end)
+local function useCustomPlate(src)
+    if GetPlayerPed(src) == 0 then return end
+    TriggerClientEvent('MrNewbCustomPlates:client:usedPlate', src)
+end
+
+lib.callback.register('MrNewbCustomPlates:applyPlate', handleApplyPlate)
+bridge.framework.registerItemUse(Config.PlateItemName, useCustomPlate)
 
 AddEventHandler('onResourceStart', function(resourceName)
-    if GetCurrentResourceName() ~= resourceName then return end
+    if resourceName ~= cache.resource then return end
     exports[bridge.name]:VersionCheck('MrNewb/patchnotes', resourceName)
 end)

@@ -4,26 +4,30 @@ lua54 'yes'
 name 'MrNewbCustomPlates'
 description 'Custom license plate item with bad-word filter and multi-framework support'
 author 'MrNewb'
-version '3.0.1'
+version '3.1.0'
 
 shared_scripts {
     '@ox_lib/init.lua',
     '@Newb_Bridge/import.lua',
-    'configs/config.lua',
-    'resource/shared/plate_helpers.lua',
+    'resource/open/shared/config.lua',
+    'resource/modules/plate/shared/validation.lua',
 }
 
 client_scripts {
-    'resource/client/plate.lua',
+    'resource/modules/plate/client/customizer.lua',
 }
 
 server_scripts {
     '@oxmysql/lib/MySQL.lua',
-    'resource/server/plates.lua',
-    'resource/server/ox_inventory.lua',
+    'resource/modules/plate/server/plates.lua',
+    'resource/modules/plate/server/ox_inventory.lua',
 }
 
 ui_page 'web/build/index.html'
+
+ox_libs {
+    'locale',
+}
 
 files {
     'locales/*.json',
@@ -40,8 +44,5 @@ dependencies {
 }
 
 escrow_ignore {
-    'configs/*.lua',
-    'locales/*.json',
-    'resource/**/*.lua',
-    'web/**/*',
+    '**/*',
 }

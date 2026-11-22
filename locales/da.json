@@ -3,7 +3,7 @@
         "Title": "Nummerplade Tilpasning",
         "Submit": "Indsend",
         "Cancel": "Annuller",
-        "Description": "Indtast venligst den nummerpladetekst du ønsker",
+        "Description": "Kun bogstaver og tal, %s tegn.",
         "InputLabel": "Nummerpladetekst",
         "MinLengthHint": "mindst %s",
         "Invalid": "Den nummerpladetekst er ikke tilladt"

@@ -3,7 +3,7 @@
         "Title": "Personalização de Placa",
         "Submit": "Enviar",
         "Cancel": "Cancelar",
-        "Description": "Por favor digite o texto da placa que você quer",
+        "Description": "Apenas letras e números, %s caracteres.",
         "InputLabel": "Texto da placa",
         "MinLengthHint": "mínimo %s",
         "Invalid": "Esse texto de placa não é permitido"

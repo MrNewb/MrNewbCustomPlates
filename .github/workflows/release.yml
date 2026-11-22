@@ -1,5 +1,12 @@
 name: Release
 
+# Builds a distribution-ready release when `version` in fxmanifest.lua is bumped.
+# The package holds only what the resource needs at runtime. If web/package.json exists the UI is
+# built with Bun and web/ ships only web/build. Git files, editor and tooling folders, docs, images
+# at the repo root, backups and NUI source are left out. [INSTALL]/ ships as is. A check step fails
+# the run before anything is published if a dev file slips through or the manifest points at a
+# file that is not in the package.
+
 on:
   push:
     branches:
@@ -13,7 +20,11 @@ permissions:
   contents: write
 
 env:
-  RELEASE_NAME: MrNewbCustomPlates
+  RESOURCE_NAME: MrNewbCustomPlates
+
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 jobs:
   check-version:
@@ -23,14 +34,16 @@ jobs:
       version: ${{ steps.meta.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           fetch-depth: 2
 
       - name: Detect fxmanifest version change
         id: meta
         run: |
-          CURRENT=$(grep -E '^version ' fxmanifest.lua | sed -E "s/^version[[:space:]]+['\"]([^'\"]+)['\"].*/\1/")
+          read_version() { grep -oP '^\s*version\s+["\x27]\K[^"\x27]+' | head -n1; }
+          CURRENT=$(read_version < fxmanifest.lua)
+          if [ -z "$CURRENT" ]; then echo "::error file=fxmanifest.lua::no version line found"; exit 1; fi
           echo "version=$CURRENT" >> "$GITHUB_OUTPUT"
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -46,7 +59,7 @@ jobs:
             exit 0
           fi
 
-          PREVIOUS=$(git show "$BEFORE:fxmanifest.lua" 2>/dev/null | grep -E '^version ' | sed -E "s/^version[[:space:]]+['\"]([^'\"]+)['\"].*/\1/" || true)
+          PREVIOUS=$(git show "$BEFORE:fxmanifest.lua" 2>/dev/null | read_version || true)
           if [ "$CURRENT" = "$PREVIOUS" ]; then
             echo "should_release=false" >> "$GITHUB_OUTPUT"
             echo "fxmanifest changed but version is still $CURRENT; skipping release."
@@ -59,63 +72,127 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-version
     if: needs.check-version.outputs.should_release == 'true'
+    env:
+      VERSION: ${{ needs.check-version.outputs.version }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Bun
+        if: hashFiles('web/package.json') != ''
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.3.14
+          bun-version: "1.3.14"
 
       - name: Build web UI
+        if: hashFiles('web/package.json') != ''
         working-directory: web
         run: |
+          if [ ! -f bun.lock ]; then
+            echo "::error::web/bun.lock is not in the repo. Commit it so the UI builds with a frozen lockfile."
+            exit 1
+          fi
+          rm -rf build
           bun install --frozen-lockfile
           bun run build
+          test -f build/index.html
 
-      - name: Prepare release package
-        env:
-          VERSION: ${{ needs.check-version.outputs.version }}
+      - name: Prepare distribution package
         run: |
-          RELEASE_ROOT="release/${RELEASE_NAME}"
-          mkdir -p "$RELEASE_ROOT/web/build"
+          ROOT="release/${RESOURCE_NAME}"
+          rm -rf release
+          mkdir -p "$ROOT"
 
+          # Everything except dev-only files. A leading / anchors a pattern to the resource root.
           rsync -a \
-            --exclude '.git' \
-            --exclude '.gitattributes' \
-            --exclude '.gitignore' \
-            --exclude '.github' \
-            --exclude '.cursor' \
-            --exclude '.cursorrules' \
-            --exclude '.impeccable' \
-            --exclude 'release' \
-            --exclude 'web' \
-            --exclude 'node_modules' \
-            --exclude 'DESIGN.md' \
-            --exclude 'PRODUCT.md' \
-            ./ "$RELEASE_ROOT/"
+            --include='/\[INSTALL\]/***' \
+            --include='/\[install\]/***' \
+            --exclude='.git*' \
+            --exclude='.github' \
+            --exclude='.cursor*' \
+            --exclude='.claude*' \
+            --exclude='.impeccable' \
+            --exclude='.codex*' \
+            --exclude='.agents' \
+            --exclude='.mcp.json' \
+            --exclude='.vscode' \
+            --exclude='.idea' \
+            --exclude='node_modules' \
+            --exclude='__pycache__' \
+            --exclude='*.md' \
+            --exclude='*.MD' \
+            --exclude='*.zip' \
+            --exclude='*.bak' \
+            --exclude='*.orig' \
+            --exclude='_tmp_*' \
+            --exclude='/README.txt' \
+            --exclude='/readme.txt' \
+            --exclude='/*.png' \
+            --exclude='/*.jpg' \
+            --exclude='/*.webp' \
+            --exclude='/tools' \
+            --exclude='/mockups' \
+            --exclude='/_mockups' \
+            --exclude='/_screenshots' \
+            --exclude='/web' \
+            --exclude='/release' \
+            ./ "$ROOT/"
 
-          rsync -a web/build/ "$RELEASE_ROOT/web/build/"
+          # web/ ships the compiled UI only
+          if [ -f web/package.json ]; then
+            mkdir -p "$ROOT/web"
+            rsync -a web/build "$ROOT/web/"
+          fi
+
+      - name: Verify distribution package
+        run: |
+          shopt -s globstar
+          ROOT="release/${RESOURCE_NAME}"
+          fail=0
+          test -f "$ROOT/fxmanifest.lua" || { echo "::error::fxmanifest.lua missing"; fail=1; }
+
+          if [ -f web/package.json ]; then
+            test -f "$ROOT/web/build/index.html" || { echo "::error::web/build/index.html missing"; fail=1; }
+            extra=$(find "$ROOT/web" -mindepth 1 -maxdepth 1 ! -name build)
+            [ -n "$extra" ] && { echo "::error::web/ must contain only build/, found: $extra"; fail=1; }
+          fi
+
+          bad=$(cd "$ROOT" && find . \( -path './[[]INSTALL[]]' -o -path './[[]install[]]' \) -prune -o \( -name '.git*' -o -name '.cursor*' -o -name '.claude*' -o -name '.codex*' -o -name '.agents' -o -name '.mcp.json' \
+                -o -name '.impeccable' -o -name '.vscode' -o -name 'node_modules' -o -iname '*.md' -o -iname '*.zip' \
+                -o -name '*.bak' -o -name '_tmp_*' \) -print; ls -d ./tools ./README.txt ./readme.txt 2>/dev/null || true)
+          [ -n "$bad" ] && { echo "::error::dev files in the package:"; echo "$bad"; fail=1; }
+
+          # every local path fxmanifest.lua loads must be present
+          refs=$(grep -v '^\s*--' "$ROOT/fxmanifest.lua" | grep -oP "['\"]\K[^'\"@][^'\"]*/[^'\"]*(?=['\"])" | sort -u)
+          for ref in $refs; do
+            case "$ref" in
+              *'*'*|*'?'*) ls $ROOT/$ref >/dev/null 2>&1 || { echo "::error::manifest pattern matches nothing: $ref"; fail=1; } ;;
+              *) ls -d "$ROOT/$ref"* >/dev/null 2>&1 || { echo "::error::manifest file missing: $ref"; fail=1; } ;;
+            esac
+          done
+
+          [ $fail -eq 0 ] || exit 1
+          echo "Package OK: $(find "$ROOT" -type f | wc -l) files"
 
       - name: Create zip archive
-        env:
-          VERSION: ${{ needs.check-version.outputs.version }}
         run: |
           cd release
-          zip -r "../${RELEASE_NAME}-${VERSION}.zip" "${RELEASE_NAME}"
+          zip -qr "../${RESOURCE_NAME}-${VERSION}.zip" "${RESOURCE_NAME}"
 
       - name: Upload workflow artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.RELEASE_NAME }}-${{ needs.check-version.outputs.version }}
-          path: ${{ env.RELEASE_NAME }}-${{ needs.check-version.outputs.version }}.zip
+          name: ${{ env.RESOURCE_NAME }}-${{ env.VERSION }}
+          path: ${{ env.RESOURCE_NAME }}-${{ env.VERSION }}.zip
+          if-no-files-found: error
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ needs.check-version.outputs.version }}
-          name: v${{ needs.check-version.outputs.version }}
-          files: ${{ env.RELEASE_NAME }}-${{ needs.check-version.outputs.version }}.zip
+          tag_name: v${{ env.VERSION }}
+          name: v${{ env.VERSION }}
+          target_commitish: ${{ github.sha }}
+          files: ${{ env.RESOURCE_NAME }}-${{ env.VERSION }}.zip
+          fail_on_unmatched_files: true
           generate_release_notes: true

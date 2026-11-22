@@ -3,7 +3,7 @@
         "Title": "Kenteken Aanpassing",
         "Submit": "Verzenden",
         "Cancel": "Annuleren",
-        "Description": "Voer de kentekentekst in die je wilt",
+        "Description": "Alleen letters en cijfers, %s tekens.",
         "InputLabel": "Kentekentekst",
         "MinLengthHint": "minimaal %s",
         "Invalid": "Die kentekentekst is niet toegestaan"

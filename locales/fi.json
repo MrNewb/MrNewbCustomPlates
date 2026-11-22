@@ -3,7 +3,7 @@
         "Title": "Kilven Muokkaus",
         "Submit": "Lähetä",
         "Cancel": "Peruuta",
-        "Description": "Syötä haluamasi kilven teksti",
+        "Description": "Vain kirjaimia ja numeroita, %s merkkiä.",
         "InputLabel": "Kilpiteksti",
         "MinLengthHint": "vähintään %s",
         "Invalid": "Tätä kilpitekstiä ei sallita"

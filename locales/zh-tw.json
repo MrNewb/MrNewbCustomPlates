@@ -3,7 +3,7 @@
         "Title": "車牌客製化",
         "Submit": "提交",
         "Cancel": "取消",
-        "Description": "請輸入您想要的車牌文字",
+        "Description": "僅限字母和數字，%s個字元。",
         "InputLabel": "車牌文字",
         "MinLengthHint": "至少 %s 個字",
         "Invalid": "不允許使用該車牌文字"

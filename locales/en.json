@@ -1,29 +1,29 @@
 {
     "PlateCustomize": {
         "Title": "Plate Customization",
-        "Submit": "Submit",
+        "Submit": "Fit plate",
         "Cancel": "Cancel",
-        "Description": "Type the plate you want.",
+        "Description": "Type your plate. Letters and numbers only, %s characters.",
         "InputLabel": "License plate text",
         "MinLengthHint": "%s minimum",
-        "Invalid": "That plate aint happening."
+        "Invalid": "That plate isn't happening."
     },
     "Checks": {
         "Canceled": "Canceled.",
-        "NoInput": "You didnt type a plate.",
+        "NoInput": "You didn't type a plate.",
         "NotLongEnough": "Plate text is too short.",
         "TooLong": "Plate text is too long.",
-        "MustBeNetworked": "That vehicle isnt networked.",
+        "MustBeNetworked": "That vehicle isn't networked.",
         "NoVehicle": "No vehicle close enough.",
         "LetterNumber": "Letters and numbers only.",
         "PlateTaken": "That plate is already taken.",
-        "NotVehicleOwner": "You dont own the vehicle with plate %s.",
+        "NotVehicleOwner": "You don't own the vehicle with plate %s.",
         "BadWord": "You cannot use that word.",
         "InsideVehicle": "Get out of the vehicle first.",
-        "FrameworkUnsupported": "Your framework isnt supported.",
+        "FrameworkUnsupported": "Your framework isn't supported.",
         "NoItem": "You do not have a plate to fit.",
         "SamePlate": "That plate is already on it.",
-        "UiUnavailable": "Couldnt open the plate menu."
+        "UiUnavailable": "Couldn't open the plate menu."
     },
     "Success": {
         "PlateSet": "Plate changed from %s to %s."

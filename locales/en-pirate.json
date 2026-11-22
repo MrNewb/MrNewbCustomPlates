@@ -3,7 +3,7 @@
         "Title": "Plate Customization, Ye Scallywag",
         "Submit": "Aye, Submit",
         "Cancel": "Belay",
-        "Description": "Enter yer desired plate text, matey",
+        "Description": "Letters and numbers only, %s characters, arr!",
         "InputLabel": "Plate scribbles",
         "MinLengthHint": "%s marks at least",
         "Invalid": "That plate scribble be forbidden, matey"

@@ -3,7 +3,7 @@
         "Title": "Rendszám Testreszabás",
         "Submit": "Elküld",
         "Cancel": "Mégse",
-        "Description": "Kérjük, adja meg a kívánt rendszám szöveget",
+        "Description": "Csak betűk és számok, %s karakter.",
         "InputLabel": "Rendszám szövege",
         "MinLengthHint": "legalább %s",
         "Invalid": "Ez a rendszámszöveg nem engedélyezett"

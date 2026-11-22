@@ -3,7 +3,7 @@
         "Title": "Personnalisation de Plaque",
         "Submit": "Soumettre",
         "Cancel": "Annuler",
-        "Description": "Veuillez entrer le texte de plaque que vous voulez",
+        "Description": "Lettres et chiffres uniquement, %s caractères.",
         "InputLabel": "Texte de plaque",
         "MinLengthHint": "%s minimum",
         "Invalid": "Ce texte de plaque n'est pas autorisé"

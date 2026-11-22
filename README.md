@@ -33,8 +33,10 @@ Do not add `server.export` on the ox_inventory item. Omit `consume` on the item 
 
 ## Config
 
-`configs/config.lua` — `PlateItemName` (default `customizableplate`), min/max length, `FilteredWords`, progress bar toggle, optional ox exclusive.
+`resource/open/shared/config.lua` holds the plate item name (default `customizableplate`), the minimum and maximum plate length, the list of filtered words, the progress bar toggle and the optional ox_inventory exclusive mode.
 
 The player must be outside the vehicle. The server re-checks before writing. Optional: [MrNewbVehicleKeys](https://github.com/MrNewb/MrNewbVehicleKeysV2) so key metadata follows the new plate.
 
 SQL details: [framework](https://mrnewb.github.io/docs/mrnewbcustomplates/install/framework). Inventory icons by [Decay Studios](https://discord.gg/yDXZwZPjdN).
+
+Restart the resource afterwards so players download the new build.

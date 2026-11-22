@@ -1,4 +1,28 @@
-web/node_modules
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Built UI: the release workflow builds it
 web/build
-.impeccable
+
+# CI / local release output
+release/
+
+# Build tooling cache
+web/tsconfig.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+
+# Local design context, not part of the repo
+/.impeccable
 web/.impeccable
+DESIGN.md
+PRODUCT.md

@@ -3,7 +3,7 @@
         "Title": "번호판 커스터마이징",
         "Submit": "제출",
         "Cancel": "취소",
-        "Description": "원하는 번호판 텍스트를 입력하세요",
+        "Description": "문자와 숫자만, %s자.",
         "InputLabel": "번호판 텍스트",
         "MinLengthHint": "최소 %s자",
         "Invalid": "해당 번호판 텍스트는 사용할 수 없습니다"

@@ -1,22 +1,23 @@
-local plateInputResult
-local waitingForPlateInput = false
-local uiAcknowledged = false
+local pendingInput
+local pendingAcknowledge
+local applyingPlate = false
 
-local function finishPlateInput(result)
-    if not waitingForPlateInput then return end
+local function finishPlateInput(plate)
+    if not pendingInput then return end
 
+    local input = pendingInput
+    pendingInput = nil
     SetNuiFocus(false, false)
     SendNUIMessage({ action = 'close' })
-    plateInputResult = result
-    waitingForPlateInput = false
+    input:resolve(plate or false)
 end
 
+-- Opens the overlay and waits for the player to submit (the plate) or cancel (nil)
 local function openPlateCustomizer(labels)
-    finishPlateInput(nil)
+    finishPlateInput()
 
-    plateInputResult = nil
-    waitingForPlateInput = true
-    uiAcknowledged = false
+    pendingInput = promise.new()
+    pendingAcknowledge = promise.new()
     SetNuiFocus(true, true)
     SendNUIMessage({
         action = 'open',
@@ -26,31 +27,24 @@ local function openPlateCustomizer(labels)
         labels = labels,
     })
 
-    local acknowledgeDeadline = GetGameTimer() + 2000
-    while waitingForPlateInput and not uiAcknowledged and GetGameTimer() < acknowledgeDeadline do
-        Wait(50)
-    end
-
-    if waitingForPlateInput and not uiAcknowledged then
-        finishPlateInput(nil)
+    local acknowledge = pendingAcknowledge
+    SetTimeout(2000, function() acknowledge:resolve(false) end)
+    if not Citizen.Await(acknowledge) then
+        finishPlateInput()
         bridge.notifications.notify({ description = locale('Checks.UiUnavailable'), type = 'error' })
         return
     end
 
-    while waitingForPlateInput do
-        Wait(100)
-    end
-
-    return plateInputResult
+    return Citizen.Await(pendingInput) or nil
 end
 
 RegisterNUICallback('plateReady', function(_, cb)
-    uiAcknowledged = true
+    if pendingAcknowledge then pendingAcknowledge:resolve(true) end
     cb(1)
 end)
 
 RegisterNUICallback('plateSubmit', function(data, cb)
-    if not waitingForPlateInput then
+    if not pendingInput then
         cb({ ok = false })
         return
     end
@@ -61,24 +55,24 @@ RegisterNUICallback('plateSubmit', function(data, cb)
         return
     end
 
-    local success, result = ValidatePlate(plate)
-    if not success then
-        cb({ ok = false, error = locale(result) })
+    local valid, reason = ValidatePlate(plate)
+    if not valid then
+        cb({ ok = false, error = locale(reason) })
         return
     end
 
-    finishPlateInput(result)
+    finishPlateInput(valid)
     cb({ ok = true })
 end)
 
 RegisterNUICallback('plateCancel', function(_, cb)
-    finishPlateInput(nil)
+    finishPlateInput()
     cb(1)
 end)
 
 AddEventHandler('onResourceStop', function(resourceName)
-    if resourceName ~= GetCurrentResourceName() then return end
-    finishPlateInput(nil)
+    if resourceName ~= cache.resource then return end
+    finishPlateInput()
 end)
 
 local function getPlateTargetVehicle(ped)
@@ -131,37 +125,32 @@ local function playPlateChangeProgress()
     }) ~= false
 end
 
-local applyingPlate = false
+local function askForPlate()
+    local length = PlateLimits.min == PlateLimits.max and PlateLimits.min or ('%s-%s'):format(PlateLimits.min, PlateLimits.max)
 
-RegisterNetEvent('MrNewbCustomPlates:Client:UsePlate', function()
-    if source ~= 65535 then return end
-    if applyingPlate then return end
-    applyingPlate = true
-
-    local ped = cache.ped
-    local vehicle = getPlateTargetVehicle(ped)
-    if not vehicle then
-        applyingPlate = false
-        return
-    end
-
-    local plate = openPlateCustomizer({
+    return openPlateCustomizer({
         title = locale('PlateCustomize.Title'),
-        description = locale('PlateCustomize.Description'),
+        description = locale('PlateCustomize.Description', length),
         submit = locale('PlateCustomize.Submit'),
+        submitting = locale('Progressbar.ProgressText') .. '...',
         cancel = locale('PlateCustomize.Cancel'),
+        lettersOnly = locale('Checks.LetterNumber'),
         inputLabel = locale('PlateCustomize.InputLabel'),
         minLengthHint = locale('PlateCustomize.MinLengthHint', PlateLimits.min),
         invalidPlate = locale('PlateCustomize.Invalid'),
     })
-    if not plate then
-        applyingPlate = false
-        return
-    end
+end
+
+local function changePlate()
+    local ped = cache.ped
+    local vehicle = getPlateTargetVehicle(ped)
+    if not vehicle then return end
+
+    local plate = askForPlate()
+    if not plate then return end
 
     if not DoesEntityExist(vehicle) or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > 10.0 then
         bridge.notifications.notify({ description = locale('Checks.NoVehicle'), type = 'error' })
-        applyingPlate = false
         return
     end
 
@@ -169,13 +158,21 @@ RegisterNetEvent('MrNewbCustomPlates:Client:UsePlate', function()
     local completed = playPlateChangeProgress()
     ClearPedTasks(ped)
     if not completed then
-        applyingPlate = false
-        return bridge.notifications.notify({ description = locale('Checks.Canceled'), type = 'error' })
+        bridge.notifications.notify({ description = locale('Checks.Canceled'), type = 'error' })
+        return
     end
 
-    lib.callback.await('MrNewbCustomPlates:Callback:ApplyPlate', false, {
+    lib.callback.await('MrNewbCustomPlates:applyPlate', false, {
         netId = NetworkGetNetworkIdFromEntity(vehicle),
         plate = plate,
     })
+end
+
+RegisterNetEvent('MrNewbCustomPlates:client:usedPlate', function()
+    if source ~= 65535 then return end
+    if applyingPlate then return end
+
+    applyingPlate = true
+    changePlate()
     applyingPlate = false
 end)

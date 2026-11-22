@@ -3,7 +3,7 @@
         "Title": "Kennzeichen Anpassung",
         "Submit": "Senden",
         "Cancel": "Abbrechen",
-        "Description": "Bitte geben Sie den gewünschten Kennzeichentext ein",
+        "Description": "Nur Buchstaben und Zahlen, %s Zeichen.",
         "InputLabel": "Kennzeichentext",
         "MinLengthHint": "mindestens %s",
         "Invalid": "Dieser Kennzeichentext ist nicht erlaubt"

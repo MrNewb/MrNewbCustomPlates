@@ -2,7 +2,9 @@ export type PlateLabels = {
   title: string;
   description: string;
   submit: string;
+  submitting: string;
   cancel: string;
+  lettersOnly: string;
   inputLabel: string;
   minLengthHint: string;
   invalidPlate: string;
@@ -34,9 +36,11 @@ export type PlateUiConfig = {
 
 export const defaultLabels: PlateLabels = {
   title: 'Plate Customization',
-  description: 'Enter your custom plate text below',
-  submit: 'Submit',
+  description: 'Type your plate. Letters and numbers only.',
+  submit: 'Fit plate',
+  submitting: 'Setting plate...',
   cancel: 'Cancel',
+  lettersOnly: 'Letters and numbers only.',
   inputLabel: 'License plate text',
   minLengthHint: '1 minimum',
   invalidPlate: 'That plate text is not allowed',
