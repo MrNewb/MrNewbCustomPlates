@@ -4,13 +4,12 @@
 
 Usable plate item. Type a plate on the license-plate overlay, it is filtered, then applied to a nearby owned vehicle.
 
-[Documentation](https://mrnewb.github.io/docs/mrnewbcustomplates) · [Install guide](https://mrnewb.github.io/docs/mrnewbcustomplates/install) · [Tebex](https://mrnewbscripts.tebex.io/) · [Discord](https://discord.gg/mrnewbscripts) · [Preview](https://www.youtube.com/watch?v=fGq9QBig3j4) · [Short](https://www.youtube.com/shorts/QMZAePOYOdo)
+[Documentation](https://mrnewb.github.io/docs/mrnewbcustomplates) · [Install guide](https://mrnewb.github.io/docs/mrnewbcustomplates/install) · [Tebex](https://mrnewbscripts.tebex.io/) · [Discord](https://discord.gg/mrnewbscripts) · [Video](https://www.youtube.com/watch?v=C2C-yq4uy48) · [Short](https://www.youtube.com/shorts/QMZAePOYOdo)
 
 <a href="https://www.youtube.com/shorts/QMZAePOYOdo"><img src=".github/assets/short.webp" alt="MrNewbCustomPlates on YouTube Shorts" width="200"></a>
 
 ![MrNewbCustomPlates V3](MrNewbCustomPlates-V3.png)
 
-[![MrNewbCustomPlates preview](https://img.youtube.com/vi/fGq9QBig3j4/hqdefault.jpg)](https://www.youtube.com/watch?v=fGq9QBig3j4)
 
 ## Features
 
