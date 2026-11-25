@@ -4,6 +4,7 @@
         "Submit": "Pošalji",
         "Cancel": "Odustani",
         "Description": "Unesite tekst tablice koji želite",
+        "VehicleDescription": "Postavljanje nove tablice na %s. Samo slova i brojke, %s znakova.",
         "InputLabel": "Tekst registracije",
         "MinLengthHint": "najmanje %s",
         "Invalid": "Taj tekst registracije nije dopušten"

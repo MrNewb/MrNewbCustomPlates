@@ -4,6 +4,7 @@
         "Submit": "Senden",
         "Cancel": "Abbrechen",
         "Description": "Nur Buchstaben und Zahlen, %s Zeichen.",
+        "VehicleDescription": "Neues Kennzeichen für %s anbringen. Nur Buchstaben und Zahlen, %s Zeichen.",
         "InputLabel": "Kennzeichentext",
         "MinLengthHint": "mindestens %s",
         "Invalid": "Dieser Kennzeichentext ist nicht erlaubt"

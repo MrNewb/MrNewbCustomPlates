@@ -8,6 +8,7 @@ export type PlateLabels = {
   inputLabel: string;
   minLengthHint: string;
   invalidPlate: string;
+  placeholder: string;
 };
 
 export type PlateOpenPayload = {
@@ -44,6 +45,7 @@ export const defaultLabels: PlateLabels = {
   inputLabel: 'License plate text',
   minLengthHint: '1 minimum',
   invalidPlate: 'That plate text is not allowed',
+  placeholder: 'AB12CD34',
 };
 
 const rtlLanguages = new Set(['ar', 'fa', 'he', 'ur']);

@@ -18,6 +18,7 @@ Config = Config or {}
 Config.PlateItemName = 'customizableplate'
 Config.EnableOxExclusive = false
 Config.ProgressBarEnabled = true
+Config.MaxInteractDistance = 10.0 -- How close the player must be to the vehicle that gets the plate.
 
 -- Matched as substrings, so keep entries long enough that they cannot swallow an
 -- innocent plate: 'ass' would also block CLASS, BASS and PASSAT.

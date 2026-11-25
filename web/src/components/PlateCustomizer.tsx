@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type FormEvent, type MouseEvent } from 'react';
+import logo from '../assets/mrnewb-logo.webp';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { fetchNui, postNui } from '../utils/fetchNui';
@@ -15,7 +16,6 @@ type PlateSubmitResponse = {
   error?: string;
 };
 
-const PLACEHOLDER = 'AB12CD34EF56GH78';
 const STRIPPED_NOTE_MS = 2000;
 
 // The plate art is 2:1 and its blank field runs about 12% to 88% of the width and 27% to 79% of the height.
@@ -135,8 +135,13 @@ export function PlateCustomizer({ config, onClose }: PlateCustomizerProps) {
     >
       <Card className="w-[35rem] max-w-full gap-4 bg-card py-5 shadow-none" role="dialog" aria-modal="true" aria-labelledby="plate-title" aria-busy={submitting}>
         <CardHeader className="px-5">
-          <CardTitle id="plate-title" className="text-[1.05rem] leading-snug">{labels.title}</CardTitle>
-          <CardDescription className="text-[0.875rem]">{labels.description}</CardDescription>
+          <div className="flex items-start justify-between gap-4">
+            <div className="grid gap-1.5">
+              <CardTitle id="plate-title" className="text-[1.05rem] leading-snug">{labels.title}</CardTitle>
+              <CardDescription className="text-[0.875rem]">{labels.description}</CardDescription>
+            </div>
+            <img className="h-9 w-auto shrink-0 select-none opacity-90" src={logo} alt="MrNewb Scripts" draggable={false} />
+          </div>
         </CardHeader>
 
         <form onSubmit={handleFormSubmit}>
@@ -168,7 +173,7 @@ export function PlateCustomizer({ config, onClose }: PlateCustomizerProps) {
                   spellCheck={false}
                   minLength={minLength}
                   maxLength={maxLength}
-                  placeholder={PLACEHOLDER.slice(0, maxLength)}
+                  placeholder={labels.placeholder.slice(0, maxLength)}
                   required
                   value={plate}
                   onChange={(event) => handleChange(event.target.value)}

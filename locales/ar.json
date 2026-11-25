@@ -4,6 +4,7 @@
         "Submit": "إرسال",
         "Cancel": "إلغاء",
         "Description": "حروف وأرقام فقط، %s خانات.",
+        "VehicleDescription": "تركيب لوحة جديدة على %s. أحرف وأرقام فقط، %s خانات.",
         "InputLabel": "نص لوحة الأرقام",
         "MinLengthHint": "%s كحد أدنى",
         "Invalid": "نص اللوحة هذا غير مسموح به"

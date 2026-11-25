@@ -56,6 +56,7 @@ export default function App() {
         inputLabel: payload.labels?.inputLabel ?? defaultLabels.inputLabel,
         minLengthHint: payload.labels?.minLengthHint ?? defaultLabels.minLengthHint,
         invalidPlate: payload.labels?.invalidPlate ?? defaultLabels.invalidPlate,
+        placeholder: payload.labels?.placeholder || defaultLabels.placeholder,
       },
     });
     setVisible(true);

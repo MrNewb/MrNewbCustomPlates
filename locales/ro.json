@@ -4,6 +4,7 @@
         "Submit": "Trimite",
         "Cancel": "Anulează",
         "Description": "Doar litere și cifre, %s caractere.",
+        "VehicleDescription": "Montare plăcuță nouă pe %s. Doar litere și cifre, %s caractere.",
         "InputLabel": "Textul plăcuței",
         "MinLengthHint": "minim %s",
         "Invalid": "Acest text de plăcuță nu este permis"

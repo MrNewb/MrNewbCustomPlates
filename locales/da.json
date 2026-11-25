@@ -4,6 +4,7 @@
         "Submit": "Indsend",
         "Cancel": "Annuller",
         "Description": "Kun bogstaver og tal, %s tegn.",
+        "VehicleDescription": "Monterer en ny nummerplade på %s. Kun bogstaver og tal, %s tegn.",
         "InputLabel": "Nummerpladetekst",
         "MinLengthHint": "mindst %s",
         "Invalid": "Den nummerpladetekst er ikke tilladt"

@@ -4,6 +4,7 @@
         "Submit": "送信",
         "Cancel": "キャンセル",
         "Description": "文字と数字のみ、%s文字。",
+        "VehicleDescription": "%sに新しいナンバープレートを取り付けます。英数字のみ、%s文字。",
         "InputLabel": "ナンバープレート",
         "MinLengthHint": "最低 %s 文字",
         "Invalid": "そのプレートテキストは使用できません"

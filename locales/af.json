@@ -4,6 +4,7 @@
         "Submit": "Stuur",
         "Cancel": "Kanselleer",
         "Description": "Slegs letters en syfers, %s karakters.",
+        "VehicleDescription": "Pas 'n nuwe nommerplaat op die %s. Slegs letters en syfers, %s karakters.",
         "InputLabel": "Kentekenteks",
         "MinLengthHint": "%s minimum",
         "Invalid": "Daardie kentekenteks word nie toegelaat nie"

@@ -4,6 +4,7 @@
         "Submit": "제출",
         "Cancel": "취소",
         "Description": "문자와 숫자만, %s자.",
+        "VehicleDescription": "%s에 새 번호판을 장착합니다. 문자와 숫자만 사용 가능, %s자.",
         "InputLabel": "번호판 텍스트",
         "MinLengthHint": "최소 %s자",
         "Invalid": "해당 번호판 텍스트는 사용할 수 없습니다"

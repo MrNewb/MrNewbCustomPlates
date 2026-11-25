@@ -4,6 +4,7 @@
         "Submit": "Wyślij",
         "Cancel": "Anuluj",
         "Description": "Tylko litery i cyfry, %s znaków.",
+        "VehicleDescription": "Montaż nowej tablicy w pojeździe %s. Tylko litery i cyfry, %s znaków.",
         "InputLabel": "Tekst tablicy",
         "MinLengthHint": "minimum %s",
         "Invalid": "Ten tekst tablicy jest niedozwolony"

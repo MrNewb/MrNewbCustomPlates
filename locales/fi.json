@@ -4,6 +4,7 @@
         "Submit": "Lähetä",
         "Cancel": "Peruuta",
         "Description": "Vain kirjaimia ja numeroita, %s merkkiä.",
+        "VehicleDescription": "Asennetaan uusi rekisterikilpi ajoneuvoon %s. Vain kirjaimia ja numeroita, %s merkkiä.",
         "InputLabel": "Kilpiteksti",
         "MinLengthHint": "vähintään %s",
         "Invalid": "Tätä kilpitekstiä ei sallita"

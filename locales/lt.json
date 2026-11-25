@@ -1,0 +1,35 @@
+{
+    "PlateCustomize": {
+        "Title": "Numerio ženklo pritaikymas",
+        "Submit": "Montuoti numerio ženklą",
+        "Cancel": "Atšaukti",
+        "Description": "Įveskite numerį. Tik raidės ir skaičiai, %s simbolių.",
+        "VehicleDescription": "Naujo numerio ženklo montavimas ant %s. Tik raidės ir skaičiai, %s simbolių.",
+        "InputLabel": "Numerio ženklo tekstas",
+        "MinLengthHint": "Mažiausiai %s",
+        "Invalid": "Toks numeris netinka."
+    },
+    "Checks": {
+        "Canceled": "Atšaukta.",
+        "NoInput": "Neįvedėte numerio.",
+        "NotLongEnough": "Numerio tekstas per trumpas.",
+        "TooLong": "Numerio tekstas per ilgas.",
+        "MustBeNetworked": "Ši transporto priemonė nesinchronizuojama tinkle.",
+        "NoVehicle": "Netoliese nėra transporto priemonės.",
+        "LetterNumber": "Tik raidės ir skaičiai.",
+        "PlateTaken": "Šis numeris jau užimtas.",
+        "NotVehicleOwner": "Transporto priemonė su numeriu %s jums nepriklauso.",
+        "BadWord": "Šio žodžio naudoti negalima.",
+        "InsideVehicle": "Pirmiausia išlipkite iš transporto priemonės.",
+        "FrameworkUnsupported": "Jūsų serverio karkasas nepalaikomas.",
+        "NoItem": "Neturite numerio ženklo, kurį galėtumėte sumontuoti.",
+        "SamePlate": "Šis numerio ženklas jau sumontuotas.",
+        "UiUnavailable": "Nepavyko atidaryti numerio ženklo meniu."
+    },
+    "Success": {
+        "PlateSet": "Numeris pakeistas iš %s į %s."
+    },
+    "Progressbar": {
+        "ProgressText": "Montuojamas numerio ženklas"
+    }
+}

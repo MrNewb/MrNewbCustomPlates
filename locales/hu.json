@@ -4,6 +4,7 @@
         "Submit": "Elküld",
         "Cancel": "Mégse",
         "Description": "Csak betűk és számok, %s karakter.",
+        "VehicleDescription": "Új rendszám felszerelése erre: %s. Csak betűk és számok, %s karakter.",
         "InputLabel": "Rendszám szövege",
         "MinLengthHint": "legalább %s",
         "Invalid": "Ez a rendszámszöveg nem engedélyezett"

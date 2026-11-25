@@ -4,6 +4,7 @@
         "Submit": "Enviar",
         "Cancel": "Cancelar",
         "Description": "Solo letras y números, %s caracteres.",
+        "VehicleDescription": "Colocando una matrícula nueva en %s. Solo letras y números, %s caracteres.",
         "InputLabel": "Texto de la matrícula",
         "MinLengthHint": "mínimo %s",
         "Invalid": "Ese texto de placa no está permitido"

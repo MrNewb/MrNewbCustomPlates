@@ -4,6 +4,7 @@
         "Submit": "Odeslat",
         "Cancel": "Zrušit",
         "Description": "Pouze písmena a číslice, %s znaků.",
+        "VehicleDescription": "Nasazení nové značky na %s. Pouze písmena a číslice, %s znaků.",
         "InputLabel": "Text SPZ",
         "MinLengthHint": "minimálně %s",
         "Invalid": "Tento text SPZ není povolen"

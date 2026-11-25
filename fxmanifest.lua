@@ -4,7 +4,7 @@ lua54 'yes'
 name 'MrNewbCustomPlates'
 description 'Custom license plate item with bad-word filter and multi-framework support'
 author 'MrNewb'
-version '3.1.1'
+version '3.2.0'
 
 shared_scripts {
     '@ox_lib/init.lua',

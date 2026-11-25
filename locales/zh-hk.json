@@ -4,6 +4,7 @@
         "Submit": "提交",
         "Cancel": "取消",
         "Description": "只限字母及數字，%s個字元。",
+        "VehicleDescription": "正在為%s安裝新車牌。只限英文字母及數字，%s個字元。",
         "InputLabel": "車牌文字",
         "MinLengthHint": "最少 %s 個字",
         "Invalid": "不允許使用該車牌文字"

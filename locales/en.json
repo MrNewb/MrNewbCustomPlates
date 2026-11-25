@@ -4,6 +4,7 @@
         "Submit": "Fit plate",
         "Cancel": "Cancel",
         "Description": "Type your plate. Letters and numbers only, %s characters.",
+        "VehicleDescription": "Fitting a new plate to the %s. Letters and numbers only, %s characters.",
         "InputLabel": "License plate text",
         "MinLengthHint": "%s minimum",
         "Invalid": "That plate isn't happening."

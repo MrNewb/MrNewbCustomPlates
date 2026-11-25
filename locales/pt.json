@@ -4,6 +4,7 @@
         "Submit": "Enviar",
         "Cancel": "Cancelar",
         "Description": "Apenas letras e números, %s caracteres.",
+        "VehicleDescription": "Instalando uma nova placa em %s. Apenas letras e números, %s caracteres.",
         "InputLabel": "Texto da placa",
         "MinLengthHint": "mínimo %s",
         "Invalid": "Esse texto de placa não é permitido"

@@ -4,6 +4,7 @@
         "Submit": "Send Inn",
         "Cancel": "Avbryt",
         "Description": "Kun bokstaver og tall, %s tegn.",
+        "VehicleDescription": "Monterer et nytt bilskilt på %s. Kun bokstaver og tall, %s tegn.",
         "InputLabel": "Skilttekst",
         "MinLengthHint": "minst %s",
         "Invalid": "Den skiltteksten er ikke tillatt"

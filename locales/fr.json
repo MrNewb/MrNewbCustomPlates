@@ -4,6 +4,7 @@
         "Submit": "Soumettre",
         "Cancel": "Annuler",
         "Description": "Lettres et chiffres uniquement, %s caractères.",
+        "VehicleDescription": "Pose d'une nouvelle plaque sur %s. Lettres et chiffres uniquement, %s caractères.",
         "InputLabel": "Texte de plaque",
         "MinLengthHint": "%s minimum",
         "Invalid": "Ce texte de plaque n'est pas autorisé"

@@ -4,6 +4,7 @@
         "Submit": "Gönder",
         "Cancel": "İptal",
         "Description": "Yalnızca harf ve rakam, %s karakter.",
+        "VehicleDescription": "%s için yeni plaka takılıyor. Yalnızca harf ve rakam, %s karakter.",
         "InputLabel": "Plaka metni",
         "MinLengthHint": "en az %s",
         "Invalid": "Bu plaka metnine izin verilmiyor"

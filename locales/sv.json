@@ -4,6 +4,7 @@
         "Submit": "Skicka",
         "Cancel": "Avbryt",
         "Description": "Endast bokstäver och siffror, %s tecken.",
+        "VehicleDescription": "Monterar en ny registreringsskylt på %s. Endast bokstäver och siffror, %s tecken.",
         "InputLabel": "Skylttext",
         "MinLengthHint": "minst %s",
         "Invalid": "Den skyltexten är inte tillåten"

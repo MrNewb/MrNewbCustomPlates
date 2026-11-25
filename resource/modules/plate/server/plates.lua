@@ -87,7 +87,7 @@ local function applyPlate(src, data)
     end
 
     local vehicle = NetworkGetEntityFromNetworkId(data.netId)
-    if vehicle == 0 or GetEntityType(vehicle) ~= 2 or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > 12.0 then
+    if vehicle == 0 or GetEntityType(vehicle) ~= 2 or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > Config.MaxInteractDistance + 2.0 then
         bridge.notifications.notify(src, { description = locale('Checks.NoVehicle'), type = 'error' })
         return false
     end

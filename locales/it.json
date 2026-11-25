@@ -4,6 +4,7 @@
         "Submit": "Invia",
         "Cancel": "Annulla",
         "Description": "Solo lettere e numeri, %s caratteri.",
+        "VehicleDescription": "Montaggio di una nuova targa su %s. Solo lettere e numeri, %s caratteri.",
         "InputLabel": "Testo targa",
         "MinLengthHint": "minimo %s",
         "Invalid": "Questo testo della targa non è consentito"

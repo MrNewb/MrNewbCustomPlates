@@ -81,7 +81,7 @@ local function getPlateTargetVehicle(ped)
         return
     end
 
-    local vehicle = lib.getClosestVehicle(GetEntityCoords(ped), 10.0, false)
+    local vehicle = lib.getClosestVehicle(GetEntityCoords(ped), Config.MaxInteractDistance, false)
     if not vehicle or vehicle == 0 then
         bridge.notifications.notify({ description = locale('Checks.NoVehicle'), type = 'error' })
         return
@@ -125,12 +125,20 @@ local function playPlateChangeProgress()
     }) ~= false
 end
 
-local function askForPlate()
+local function getVehicleModelName(vehicle)
+    local model = GetEntityModel(vehicle)
+    local label = GetLabelText(GetDisplayNameFromVehicleModel(model))
+    if label ~= 'NULL' then return label end
+    return GetDisplayNameFromVehicleModel(model)
+end
+
+local function askForPlate(vehicle)
     local length = PlateLimits.min == PlateLimits.max and PlateLimits.min or ('%s-%s'):format(PlateLimits.min, PlateLimits.max)
 
     return openPlateCustomizer({
         title = locale('PlateCustomize.Title'),
-        description = locale('PlateCustomize.Description', length),
+        description = locale('PlateCustomize.VehicleDescription', getVehicleModelName(vehicle), length),
+        placeholder = TrimPlate(GetVehicleNumberPlateText(vehicle)),
         submit = locale('PlateCustomize.Submit'),
         submitting = locale('Progressbar.ProgressText') .. '...',
         cancel = locale('PlateCustomize.Cancel'),
@@ -146,10 +154,10 @@ local function changePlate()
     local vehicle = getPlateTargetVehicle(ped)
     if not vehicle then return end
 
-    local plate = askForPlate()
+    local plate = askForPlate(vehicle)
     if not plate then return end
 
-    if not DoesEntityExist(vehicle) or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > 10.0 then
+    if not DoesEntityExist(vehicle) or #(GetEntityCoords(ped) - GetEntityCoords(vehicle)) > Config.MaxInteractDistance then
         bridge.notifications.notify({ description = locale('Checks.NoVehicle'), type = 'error' })
         return
     end

@@ -4,6 +4,7 @@
         "Submit": "Aye, Submit",
         "Cancel": "Belay",
         "Description": "Letters and numbers only, %s characters, arr!",
+        "VehicleDescription": "Fittin' a new plate to yer %s. Letters and numbers only, %s marks, arr!",
         "InputLabel": "Plate scribbles",
         "MinLengthHint": "%s marks at least",
         "Invalid": "That plate scribble be forbidden, matey"

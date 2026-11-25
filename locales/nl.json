@@ -4,6 +4,7 @@
         "Submit": "Verzenden",
         "Cancel": "Annuleren",
         "Description": "Alleen letters en cijfers, %s tekens.",
+        "VehicleDescription": "Een nieuwe kentekenplaat op de %s monteren. Alleen letters en cijfers, %s tekens.",
         "InputLabel": "Kentekentekst",
         "MinLengthHint": "minimaal %s",
         "Invalid": "Die kentekentekst is niet toegestaan"
